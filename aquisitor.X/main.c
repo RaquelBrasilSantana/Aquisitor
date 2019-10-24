@@ -13,8 +13,22 @@
 
 char tim = 1;
 int repeat = 0;
-void __interrupt myISR(void);
-   
+
+void __interrupt() myISR(void)
+{  
+    if(TMR1IF)
+    {
+        repeat++;
+        TMR1IF = 0;
+        TMR1L = TMR1H = 0x00;       
+        if(repeat >=2861)
+        {
+            salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
+            repeat = 0;
+        }
+    }
+}
+
 void main(void) 
 {
     TRISC=0x00;
@@ -91,17 +105,3 @@ void main(void)
 
      }
  }                
-void __interrupt myISR(void)
-{  
-    if(TMR1IF)
-    {
-        repeat++;
-        TMR1IF = 0;
-        TMR1L = TMR1H = 0x00;       
-        if(repeat >=2861)
-        {
-            salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
-            repeat = 0;
-        }
-    }
-}
