@@ -3,10 +3,6 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"25 Z:\Aquisitor\aquisitor.X/teclado.h
-[v _tecladoIniciar tecladoIniciar `(v  1 e 1 0 ]
-"40
-[v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
@@ -70,7 +66,7 @@
 [v i1_temperaturaLer temperaturaLer `(uc  1 e 1 0 ]
 "17 Z:\Aquisitor\aquisitor.X\main.c
 [v _myISR myISR `II(v  1 e 1 0 ]
-"32
+"34
 [v _main main `(v  1 e 1 0 ]
 "33 Z:\Aquisitor\aquisitor.X\recept.c
 [v _salvatemp salvatemp `(v  1 e 1 0 ]
@@ -93,12 +89,10 @@
 [v i1_EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
 "140
 [v _tmron tmron `(v  1 e 1 0 ]
-"20 Z:\Aquisitor\aquisitor.X/teclado.h
-[v _tecAnterior tecAnterior `uc  1 e 1 0 ]
-"21
-[v _tecAtual tecAtual `uc  1 e 1 0 ]
-"23
-[v _tabTeclas tabTeclas `DC[16]uc  1 e 16 0 ]
+"25 Z:\Aquisitor\aquisitor.X\teclado.h
+[v _tecladoIniciar tecladoIniciar `(v  1 e 1 0 ]
+"40
+[v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
 "228 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 [s S232 . 1 `uc 1 RB0 1 0 :1:0 
@@ -225,12 +219,18 @@
 [v _tim tim `uc  1 e 1 0 ]
 "15
 [v _repeat repeat `i  1 e 2 0 ]
-"32
+"20 Z:\Aquisitor\aquisitor.X\teclado.h
+[v _tecAnterior tecAnterior `uc  1 e 1 0 ]
+"21
+[v _tecAtual tecAtual `uc  1 e 1 0 ]
+"23
+[v _tabTeclas tabTeclas `DC[16]uc  1 e 16 0 ]
+"34 Z:\Aquisitor\aquisitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"36
-[v main@nr nr `uc  1 a 1 64 ]
-"107
+"38
+[v main@nr nr `uc  1 a 1 63 ]
+"109
 } 0
 "140 Z:\Aquisitor\aquisitor.X\recept.c
 [v _tmron tmron `(v  1 e 1 0 ]
@@ -249,7 +249,7 @@
 [v tempatt@Tp Tp `[3]uc  1 a 3 57 ]
 "125
 [v tempatt@temp temp `i  1 a 2 60 ]
-[v tempatt@F1405 F1405 `[3]uc  1 s 3 F1405 ]
+[v tempatt@F1429 F1429 `[3]uc  1 s 3 F1429 ]
 "130
 } 0
 "44 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
@@ -332,7 +332,7 @@
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
-"40 Z:\Aquisitor\aquisitor.X/teclado.h
+"40 Z:\Aquisitor\aquisitor.X\teclado.h
 [v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
 {
 "81
@@ -405,7 +405,7 @@
 [v TempMed@md md `[3]uc  1 a 3 35 ]
 "133
 [v TempMed@Media Media `uc  1 a 1 38 ]
-[v TempMed@F1409 F1409 `[3]uc  1 s 3 F1409 ]
+[v TempMed@F1433 F1433 `[3]uc  1 s 3 F1433 ]
 "142
 } 0
 "51 Z:\Aquisitor\aquisitor.X\recept.c
@@ -563,7 +563,7 @@
 "17 Z:\Aquisitor\aquisitor.X\main.c
 [v _myISR myISR `II(v  1 e 1 0 ]
 {
-"30
+"32
 } 0
 "44 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
 [v i1_temperaturaLer temperaturaLer `(uc  1 e 1 0 ]

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\aquisitor.X.production.sym \
   --cmf=dist/default/production\aquisitor.X.production.cmf -z -Q16F887 \
-  -oC:\Users\18263814\AppData\Local\Temp\sbpg.2 \
+  -oC:\Users\18263814\AppData\Local\Temp\src.2 \
   -Mdist/default/production/aquisitor.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\18263814\AppData\Local\Temp\sbpg.o \
+  -DENTRY=2 -k C:\Users\18263814\AppData\Local\Temp\src.o \
   dist/default/production\aquisitor.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\18263814\AppData\Local\Temp\sbpg.o
+C:\Users\18263814\AppData\Local\Temp\src.o
                 end_init                             10       10        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        1     400E       0
@@ -81,16 +81,16 @@ dist/default/production\aquisitor.X.production.o
                 text4                              1773     1773       46     2EE6       0
                 text3                              17B9     17B9       47     2F72       0
                 text2                              14C7     14C7       21     298E       0
-                text1                              132F     132F        C     265E       0
-                maintext                            713      713       E9        8       0
+                text1                               7F4      7F4        C        8       0
+                maintext                            713      713       E1        8       0
                 cstackBANK0                          20       20       2C       20       1
                 cstackCOMMON                         70       70        E       70       1
-                cstackBANK1                          A0       A0       41       A0       1
+                cstackBANK1                          A0       A0       40       A0       1
                 inittext                           1367     1367       13     26CE       0
-                dataBANK1                            E1       E1        7       A0       1
+                dataBANK1                            E0       E0        7       A0       1
                 bssBANK0                             4C       4C        4       20       1
                 strings                             800      800       99     1000       0
-                idataBANK1                         1328     1328        7     2650       0
+                idataBANK1                         1334     1334        7     2668       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -146,10 +146,10 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text4                              1773     1773       46         0
                 text3                              17B9     17B9       47         0
                 text2                              14C7     14C7       21         0
-                text1                              132F     132F        C         0
-                maintext                            713      713       E9         0
+                text1                               7F4      7F4        C         0
+                maintext                            713      713       E1         0
                 inittext                           1367     1367       13         0
-                idataBANK1                         1328     1328        7         0
+                idataBANK1                         1334     1334        7         0
 
         CLASS   STRCODE        
 
@@ -168,8 +168,8 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssBANK0                             4C       4C        4         1
 
         CLASS   BANK1          
-                cstackBANK1                          A0       A0       41         1
-                dataBANK1                            E1       E1        7         1
+                cstackBANK1                          A0       A0       40         1
+                dataBANK1                            E0       E0        7         1
 
         CLASS   BANK2          
 
@@ -200,10 +200,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  0007F8  0007FC         8       0  CODE        2
+                intentry                       000004  0007FC  000800         8       0  CODE        2
                 cstackBANK0                    000020  000030  000050        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                cstackBANK1                    0000A0  000048  0000E8        A0       1  BANK1       1
+                cstackBANK1                    0000A0  000047  0000E7        A0       1  BANK1       1
                 strings                        000800  000099  000899      1000       0  STRING      2
                 text28                         000899  00001C  0008B5      1132       0  CODE        2
                 text31                         0008B5  00004A  0008FF      116A       0  CODE        2
@@ -218,8 +218,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text38                         000D05  0000C2  000DC7      1A0A       0  CODE        2
                 text6                          000DC7  0000C4  000E8B      1B8E       0  CODE        2
                 text10                         000E8B  000175  001000      1D16       0  CODE        2
-                idataBANK1                     001328  000007  00132F      2650       0  CODE        2
-                text1                          00132F  00000C  00133B      265E       0  CODE        2
+                idataBANK1                     001334  000007  00133B      2668       0  CODE        2
                 text18                         00133B  00000E  001349      2676       0  CODE        2
                 text12                         001349  00000E  001357      2692       0  CODE        2
                 text11                         001357  000010  001367      26AE       0  CODE        2
@@ -259,26 +258,23 @@ UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
         BANK0            0050-006F             20           1
-        BANK1            00E8-00EF              8           1
+        BANK1            00E7-00EF              9           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         07FC-07FF              4
-                         1000-1327            328
+                         1000-1333            334
                          1800-1FFF            800
         CONFIG           2008-2008              1           2
         CONST            0003-0003              1           2
-                         07FC-07FF              4
-                         1000-1327            100
+                         1000-1333            100
                          1800-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         07FC-07FF              4
-                         1000-1327            100
+                         1000-1333            100
                          1800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0050-006F             20           1
-                         00E8-00EF              8
+                         00E7-00EF              9
                          0110-016F             60
                          0190-01EF             60
         SFR0             0000-001F             20           1
@@ -287,12 +283,10 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         07FC-07FF              4
-                         1000-1327            328
+                         1000-1333            334
                          1800-1FFF            800
         STRING           0003-0003              1           2
-                         07FC-07FF              4
-                         1000-1327            100
+                         1000-1333            100
                          1800-1FFF            100
 
                                   Symbol Table
@@ -320,7 +314,7 @@ EEPROM_WriteByte@gie_Status      cstackBANK1  00A6
 EEPROM_read@pont                 cstackBANK1  00A5
 EEPROM_write@pont                cstackBANK1  00AA
 EEPROM_write@value               cstackBANK1  00A7
-TempMed@F1409                    dataBANK1    00E1
+TempMed@F1433                    dataBANK1    00E0
 TempMed@Media                    cstackBANK1  00C6
 TempMed@md                       cstackBANK1  00C3
 _ADCON0                          (abs)        001F
@@ -403,7 +397,7 @@ __Hsfr1                          sfr1         0000
 __Hsfr2                          sfr2         0000
 __Hsfr3                          sfr3         0000
 __Hspace_0                       (abs)        2008
-__Hspace_1                       (abs)        00E8
+__Hspace_1                       (abs)        00E7
 __Hspace_2                       (abs)        0000
 __Hspace_3                       (abs)        0000
 __Hstack                         stack        0000
@@ -448,7 +442,7 @@ __Lstack                         stack        0000
 __Lstrings                       strings      0000
 __Ltext                          text         0000
 __S0                             (abs)        2008
-__S1                             (abs)        00E8
+__S1                             (abs)        00E7
 __S2                             (abs)        0000
 __S3                             (abs)        0000
 __Umul8_16                       text9        15AA
@@ -521,7 +515,7 @@ __end_of_delay                   text34       14A7
 __end_of_erasertemp              text18       1349
 __end_of_gotoxy                  text32       13DE
 __end_of_initLCD                 text17       16EA
-__end_of_main                    maintext     07FC
+__end_of_main                    maintext     07F4
 __end_of_media                   text20       0D05
 __end_of_myISR                   text35       1669
 __end_of_putLCD                  text31       08FF
@@ -534,7 +528,7 @@ __end_of_tecladoLer              text10       1000
 __end_of_tempatt                 text3        1800
 __end_of_temperaturaInicializar  text2        14E8
 __end_of_temperaturaLer          text4        17B9
-__end_of_tmron                   text1        133B
+__end_of_tmron                   text1        0800
 __end_of_writeLCD                text30       172D
 __end_ofi1_EEPROM_ReadByte       text47       13C4
 __end_ofi1_EEPROM_WriteByte      text44       1634
@@ -553,12 +547,12 @@ __pbssBANK0                      bssBANK0     004C
 __pcstackBANK0                   cstackBANK0  0020
 __pcstackBANK1                   cstackBANK1  00A0
 __pcstackCOMMON                  cstackCOMMON 0070
-__pdataBANK1                     dataBANK1    00E1
-__pidataBANK1                    idataBANK1   1328
+__pdataBANK1                     dataBANK1    00E0
+__pidataBANK1                    idataBANK1   1334
 __pintentry                      intentry     0004
 __pmaintext                      maintext     0713
 __pstrings                       strings      0800
-__ptext1                         text1        132F
+__ptext1                         text1        07F4
 __ptext10                        text10       0E8B
 __ptext11                        text11       1357
 __ptext12                        text12       1349
@@ -677,8 +671,8 @@ _tecladoLer                      text10       0E8B
 _tempatt                         text3        17B9
 _temperaturaInicializar          text2        14C7
 _temperaturaLer                  text4        1773
-_tim                             dataBANK1    00E7
-_tmron                           text1        132F
+_tim                             dataBANK1    00E6
+_tmron                           text1        07F4
 _writeLCD                        text30       16EA
 adcLer@adc01Temp                 cstackBANK1  00A6
 btemp                            (abs)        007E
@@ -741,7 +735,7 @@ intlevel2                        functab      0000
 intlevel3                        functab      0000
 intlevel4                        functab      0000
 intlevel5                        functab      0000
-main@nr                          cstackBANK1  00E0
+main@nr                          cstackBANK1  00DF
 media@divisao                    cstackBANK1  00B4
 media@ee                         cstackBANK1  00BD
 media@i                          cstackBANK1  00BF
@@ -758,7 +752,7 @@ stackhi                          (abs)        0000
 stacklo                          (abs)        0000
 start                            init         0010
 start_initialization             cinit        0013
-tempatt@F1405                    dataBANK1    00E4
+tempatt@F1429                    dataBANK1    00E3
 tempatt@Tp                       cstackBANK1  00D9
 tempatt@temp                     cstackBANK1  00DC
 temperaturaLer@temp01VlrInt      cstackBANK1  00D3
@@ -773,11 +767,11 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 32 in file "main.c"
+		line 34 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  nr              1   64[BANK1 ] unsigned char 
+  nr              1   63[BANK1 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -789,9 +783,9 @@ FUNCTION INFORMATION:
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
       Locals:         0       0       1       0       0
-      Temps:          0       0       2       0       0
-      Totals:         0       0       3       0       0
-Total ram usage:        3 bytes
+      Temps:          0       0       1       0       0
+      Totals:         0       0       2       0       0
+Total ram usage:        2 bytes
  Hardware stack levels required when called:   10
  This function calls:
 		_SplashScreen0
@@ -1113,7 +1107,7 @@ Total ram usage:        9 bytes
 
  *************** function _tecladoLer *****************
  Defined at:
-		line 40 in file "./teclado.h"
+		line 40 in file "teclado.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1143,7 +1137,7 @@ Total ram usage:        1 bytes
 
  *************** function _tecladoIniciar *****************
  Defined at:
-		line 25 in file "./teclado.h"
+		line 25 in file "teclado.h"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2352,16 +2346,16 @@ C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c estimated size: 886
 
+teclado.h
+		_tecladoLer    		CODE           	0E8B	0000	374
+		_tecladoIniciar		CODE           	1357	0000	17
+
+teclado.h estimated size: 391
+
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul16.c
 		___wmul        		CODE           	1580	0000	43
 
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul16.c estimated size: 43
-
-./teclado.h
-		_tecladoLer    		CODE           	0E8B	0000	374
-		_tecladoIniciar		CODE           	1357	0000	17
-
-./teclado.h estimated size: 391
 
 leitorLM35_v07.c
 		_temperaturaLer		CODE           	1773	0000	71
@@ -2386,7 +2380,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c estimated size: 157
 
 recept.c
-		_tmron         		CODE           	132F	0000	13
+		_tmron         		CODE           	07F4	0000	13
 		_EEPROM_read   		CODE           	14E8	0000	35
 		_salvatemp     		CODE           	14A7	0000	33
 		_EEPROM_write  		CODE           	13DE	0000	28
@@ -2444,7 +2438,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c est
 
 main.c
 		_myISR         		CODE           	1634	0000	54
-		_main          		CODE           	0713	0000	234
+		_main          		CODE           	0713	0000	226
 
-main.c estimated size: 288
+main.c estimated size: 280
 

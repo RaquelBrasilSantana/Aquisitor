@@ -1,755 +1,552 @@
-Version 4.0 HI-TECH Software Intermediate Code
-"12 ./recept.h
-[; ;./recept.h: 12:  int EEPROM_read(unsigned char pont);
+Version 3.2 HI-TECH Software Intermediate Code
+"12 recept.h
 [v _EEPROM_read `(i ~T0 @X0 0 ef1`uc ]
 "11
-[; ;./recept.h: 11:  void EEPROM_write(unsigned char pont,unsigned int value);
 [v _EEPROM_write `(v ~T0 @X0 0 ef2`uc`ui ]
 "13
-[; ;./recept.h: 13:     void EEPROM_WriteByte(unsigned char eepromAddress, unsigned char eepromData);
 [v _EEPROM_WriteByte `(v ~T0 @X0 0 ef2`uc`uc ]
 "14
-[; ;./recept.h: 14:     unsigned char EEPROM_ReadByte(unsigned char eepromAddress);
 [v _EEPROM_ReadByte `(uc ~T0 @X0 0 ef1`uc ]
 "4628 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 4628: extern volatile __bit WR __attribute__((address(0xC61)));
 [v _WR `Vb ~T0 @X0 0 e@3169 ]
 "3257
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3257: extern volatile unsigned char EEADR __attribute__((address(0x10D)));
 [v _EEADR `Vuc ~T0 @X0 0 e@269 ]
 "3245
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3245: extern volatile unsigned char EEDATA __attribute__((address(0x10C)));
 [v _EEDATA `Vuc ~T0 @X0 0 e@268 ]
 "3505
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3505:     struct {
 [s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
 [n S137 . RD WR WREN WRERR . EEPGD ]
 "3504
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3504: typedef union {
 [u S136 `S137 1 ]
 [n S136 . . ]
 "3514
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3514: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x18C)));
 [v _EECON1bits `VS136 ~T0 @X0 0 e@396 ]
 "4631
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 4631: extern volatile __bit WREN __attribute__((address(0xC62)));
 [v _WREN `Vb ~T0 @X0 0 e@3170 ]
 "3896
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3896: extern volatile __bit GIE __attribute__((address(0x5F)));
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
 "3544
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3544: extern volatile unsigned char EECON2 __attribute__((address(0x18D)));
 [v _EECON2 `Vuc ~T0 @X0 0 e@397 ]
-"11 ./delay.h
-[; ;./delay.h: 11: void delay(unsigned int t);
+"11 delay.h
 [v _delay `(v ~T0 @X0 0 ef1`ui ]
 "4178 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 4178: extern volatile __bit RD __attribute__((address(0xC60)));
 [v _RD `Vb ~T0 @X0 0 e@3168 ]
 "4370
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 4370: extern volatile __bit TMR1IE __attribute__((address(0x460)));
 [v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
 "4040
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 4040: extern volatile __bit PEIE __attribute__((address(0x5E)));
 [v _PEIE `Vb ~T0 @X0 0 e@94 ]
 "657
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 657: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
 [v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
 "664
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 664: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
 [v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
 "671
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 671: extern volatile unsigned char T1CON __attribute__((address(0x010)));
 [v _T1CON `Vuc ~T0 @X0 0 e@16 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 "61
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 61: __asm("TMR0 equ 01h");
 [; <" TMR0 equ 01h ;# ">
 "68
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 68: __asm("PCL equ 02h");
 [; <" PCL equ 02h ;# ">
 "75
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 75: __asm("STATUS equ 03h");
 [; <" STATUS equ 03h ;# ">
 "161
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 161: __asm("FSR equ 04h");
 [; <" FSR equ 04h ;# ">
 "168
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 168: __asm("PORTA equ 05h");
 [; <" PORTA equ 05h ;# ">
 "230
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 230: __asm("PORTB equ 06h");
 [; <" PORTB equ 06h ;# ">
 "292
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 292: __asm("PORTC equ 07h");
 [; <" PORTC equ 07h ;# ">
 "354
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 354: __asm("PORTD equ 08h");
 [; <" PORTD equ 08h ;# ">
 "416
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 416: __asm("PORTE equ 09h");
 [; <" PORTE equ 09h ;# ">
 "454
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 454: __asm("PCLATH equ 0Ah");
 [; <" PCLATH equ 0Ah ;# ">
 "461
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 461: __asm("INTCON equ 0Bh");
 [; <" INTCON equ 0Bh ;# ">
 "539
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 539: __asm("PIR1 equ 0Ch");
 [; <" PIR1 equ 0Ch ;# ">
 "595
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 595: __asm("PIR2 equ 0Dh");
 [; <" PIR2 equ 0Dh ;# ">
 "652
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 652: __asm("TMR1 equ 0Eh");
 [; <" TMR1 equ 0Eh ;# ">
 "659
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 659: __asm("TMR1L equ 0Eh");
 [; <" TMR1L equ 0Eh ;# ">
 "666
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 666: __asm("TMR1H equ 0Fh");
 [; <" TMR1H equ 0Fh ;# ">
 "673
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 673: __asm("T1CON equ 010h");
 [; <" T1CON equ 010h ;# ">
 "767
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 767: __asm("TMR2 equ 011h");
 [; <" TMR2 equ 011h ;# ">
 "774
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 774: __asm("T2CON equ 012h");
 [; <" T2CON equ 012h ;# ">
 "845
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 845: __asm("SSPBUF equ 013h");
 [; <" SSPBUF equ 013h ;# ">
 "852
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 852: __asm("SSPCON equ 014h");
 [; <" SSPCON equ 014h ;# ">
 "922
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 922: __asm("CCPR1 equ 015h");
 [; <" CCPR1 equ 015h ;# ">
 "929
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 929: __asm("CCPR1L equ 015h");
 [; <" CCPR1L equ 015h ;# ">
 "936
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 936: __asm("CCPR1H equ 016h");
 [; <" CCPR1H equ 016h ;# ">
 "943
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 943: __asm("CCP1CON equ 017h");
 [; <" CCP1CON equ 017h ;# ">
 "1040
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1040: __asm("RCSTA equ 018h");
 [; <" RCSTA equ 018h ;# ">
 "1135
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1135: __asm("TXREG equ 019h");
 [; <" TXREG equ 019h ;# ">
 "1142
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1142: __asm("RCREG equ 01Ah");
 [; <" RCREG equ 01Ah ;# ">
 "1149
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1149: __asm("CCPR2 equ 01Bh");
 [; <" CCPR2 equ 01Bh ;# ">
 "1156
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1156: __asm("CCPR2L equ 01Bh");
 [; <" CCPR2L equ 01Bh ;# ">
 "1163
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1163: __asm("CCPR2H equ 01Ch");
 [; <" CCPR2H equ 01Ch ;# ">
 "1170
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1170: __asm("CCP2CON equ 01Dh");
 [; <" CCP2CON equ 01Dh ;# ">
 "1240
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1240: __asm("ADRESH equ 01Eh");
 [; <" ADRESH equ 01Eh ;# ">
 "1247
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1247: __asm("ADCON0 equ 01Fh");
 [; <" ADCON0 equ 01Fh ;# ">
 "1348
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1348: __asm("OPTION_REG equ 081h");
 [; <" OPTION_REG equ 081h ;# ">
 "1418
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1418: __asm("TRISA equ 085h");
 [; <" TRISA equ 085h ;# ">
 "1480
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1480: __asm("TRISB equ 086h");
 [; <" TRISB equ 086h ;# ">
 "1542
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1542: __asm("TRISC equ 087h");
 [; <" TRISC equ 087h ;# ">
 "1604
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1604: __asm("TRISD equ 088h");
 [; <" TRISD equ 088h ;# ">
 "1666
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1666: __asm("TRISE equ 089h");
 [; <" TRISE equ 089h ;# ">
 "1704
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1704: __asm("PIE1 equ 08Ch");
 [; <" PIE1 equ 08Ch ;# ">
 "1760
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1760: __asm("PIE2 equ 08Dh");
 [; <" PIE2 equ 08Dh ;# ">
 "1817
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1817: __asm("PCON equ 08Eh");
 [; <" PCON equ 08Eh ;# ">
 "1864
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1864: __asm("OSCCON equ 08Fh");
 [; <" OSCCON equ 08Fh ;# ">
 "1929
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1929: __asm("OSCTUNE equ 090h");
 [; <" OSCTUNE equ 090h ;# ">
 "1981
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1981: __asm("SSPCON2 equ 091h");
 [; <" SSPCON2 equ 091h ;# ">
 "2043
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2043: __asm("PR2 equ 092h");
 [; <" PR2 equ 092h ;# ">
 "2050
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2050: __asm("SSPADD equ 093h");
 [; <" SSPADD equ 093h ;# ">
 "2057
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2057: __asm("SSPMSK equ 093h");
 [; <" SSPMSK equ 093h ;# ">
 "2062
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2062: __asm("MSK equ 093h");
 [; <" MSK equ 093h ;# ">
 "2179
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2179: __asm("SSPSTAT equ 094h");
 [; <" SSPSTAT equ 094h ;# ">
 "2348
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2348: __asm("WPUB equ 095h");
 [; <" WPUB equ 095h ;# ">
 "2418
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2418: __asm("IOCB equ 096h");
 [; <" IOCB equ 096h ;# ">
 "2488
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2488: __asm("VRCON equ 097h");
 [; <" VRCON equ 097h ;# ">
 "2558
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2558: __asm("TXSTA equ 098h");
 [; <" TXSTA equ 098h ;# ">
 "2644
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2644: __asm("SPBRG equ 099h");
 [; <" SPBRG equ 099h ;# ">
 "2706
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2706: __asm("SPBRGH equ 09Ah");
 [; <" SPBRGH equ 09Ah ;# ">
 "2776
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2776: __asm("PWM1CON equ 09Bh");
 [; <" PWM1CON equ 09Bh ;# ">
 "2846
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2846: __asm("ECCPAS equ 09Ch");
 [; <" ECCPAS equ 09Ch ;# ">
 "2928
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2928: __asm("PSTRCON equ 09Dh");
 [; <" PSTRCON equ 09Dh ;# ">
 "2972
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2972: __asm("ADRESL equ 09Eh");
 [; <" ADRESL equ 09Eh ;# ">
 "2979
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 2979: __asm("ADCON1 equ 09Fh");
 [; <" ADCON1 equ 09Fh ;# ">
 "3013
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3013: __asm("WDTCON equ 0105h");
 [; <" WDTCON equ 0105h ;# ">
 "3066
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3066: __asm("CM1CON0 equ 0107h");
 [; <" CM1CON0 equ 0107h ;# ">
 "3131
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3131: __asm("CM2CON0 equ 0108h");
 [; <" CM2CON0 equ 0108h ;# ">
 "3196
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3196: __asm("CM2CON1 equ 0109h");
 [; <" CM2CON1 equ 0109h ;# ">
 "3247
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3247: __asm("EEDATA equ 010Ch");
 [; <" EEDATA equ 010Ch ;# ">
 "3252
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3252: __asm("EEDAT equ 010Ch");
 [; <" EEDAT equ 010Ch ;# ">
 "3259
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3259: __asm("EEADR equ 010Dh");
 [; <" EEADR equ 010Dh ;# ">
 "3266
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3266: __asm("EEDATH equ 010Eh");
 [; <" EEDATH equ 010Eh ;# ">
 "3273
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3273: __asm("EEADRH equ 010Fh");
 [; <" EEADRH equ 010Fh ;# ">
 "3280
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3280: __asm("SRCON equ 0185h");
 [; <" SRCON equ 0185h ;# ">
 "3337
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3337: __asm("BAUDCTL equ 0187h");
 [; <" BAUDCTL equ 0187h ;# ">
 "3389
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3389: __asm("ANSEL equ 0188h");
 [; <" ANSEL equ 0188h ;# ">
 "3451
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3451: __asm("ANSELH equ 0189h");
 [; <" ANSELH equ 0189h ;# ">
 "3501
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3501: __asm("EECON1 equ 018Ch");
 [; <" EECON1 equ 018Ch ;# ">
 "3546
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"6 ./config.h
-[p x FOSC = HS ]
+"6 config.h
+[p x FOSC=HS ]
 "7
-[p x WDTE = OFF ]
+[p x WDTE=OFF ]
 "8
-[p x PWRTE = ON ]
+[p x PWRTE=ON ]
 "9
-[p x MCLRE = OFF ]
+[p x MCLRE=OFF ]
 "10
-[p x LVP = OFF ]
+[p x LVP=OFF ]
 "11
-[p x IESO = OFF ]
+[p x IESO=OFF ]
 "12
-[p x BOREN = OFF ]
+[p x BOREN=OFF ]
 "13
-[p x FCMEN = OFF ]
+[p x FCMEN=OFF ]
 "33 recept.c
-[; ;recept.c: 33: void salvatemp(unsigned char temp)
 [v _salvatemp `(v ~T0 @X0 1 ef1`uc ]
 "34
-[; ;recept.c: 34: {
 {
 [e :U _salvatemp ]
 "33
-[; ;recept.c: 33: void salvatemp(unsigned char temp)
 [v _temp `uc ~T0 @X0 1 r1 ]
 "34
-[; ;recept.c: 34: {
 [f ]
 "35
-[; ;recept.c: 35:     unsigned int valor;
 [v _valor `ui ~T0 @X0 1 a ]
 "36
-[; ;recept.c: 36:     valor = EEPROM_read(temp);
 [e = _valor -> ( _EEPROM_read (1 _temp `ui ]
 "37
-[; ;recept.c: 37:     valor++;
 [e ++ _valor -> -> 1 `i `ui ]
 "38
-[; ;recept.c: 38:     EEPROM_write(temp,valor);
 [e ( _EEPROM_write (2 , _temp _valor ]
 "39
-[; ;recept.c: 39: }
 [e :UE 143 ]
 }
 "42
-[; ;recept.c: 42: void resetemp(void)
 [v _resetemp `(v ~T0 @X0 1 ef ]
 "43
-[; ;recept.c: 43: {
 {
 [e :U _resetemp ]
 [f ]
 "44
-[; ;recept.c: 44:    for(char i=0; i<100; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 145  ]
 [e $U 146  ]
-[e :U 145 ]
 "45
-[; ;recept.c: 45:     {
+[e :U 145 ]
 {
 "46
-[; ;recept.c: 46:         EEPROM_write(i,0b0);
-[e ( _EEPROM_write (2 , -> _i `uc -> -> 0 `i `ui ]
+[e ( _EEPROM_write (2 , _i -> -> 0 `i `ui ]
 "47
-[; ;recept.c: 47:     }
 }
+"44
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 145  ]
 [e :U 146 ]
+"47
 }
 "48
-[; ;recept.c: 48: }
 [e :UE 144 ]
 }
 "51
-[; ;recept.c: 51: unsigned char media(void)
 [v _media `(uc ~T0 @X0 1 ef ]
 "52
-[; ;recept.c: 52: {
 {
 [e :U _media ]
 [f ]
 "53
-[; ;recept.c: 53:     unsigned long divisao = 0;
 [v _divisao `ul ~T0 @X0 1 a ]
 [e = _divisao -> -> -> 0 `i `l `ul ]
 "54
-[; ;recept.c: 54:     unsigned long valor = 0;
 [v _valor `ul ~T0 @X0 1 a ]
 [e = _valor -> -> -> 0 `i `l `ul ]
 "55
-[; ;recept.c: 55:     for(char i=0; i<100; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 149  ]
 [e $U 150  ]
-[e :U 149 ]
 "56
-[; ;recept.c: 56:     {
+[e :U 149 ]
 {
 "57
-[; ;recept.c: 57:         unsigned int ee = 0;
 [v _ee `ui ~T0 @X0 1 a ]
 [e = _ee -> -> 0 `i `ui ]
 "58
-[; ;recept.c: 58:         ee = EEPROM_read(i);
-[e = _ee -> ( _EEPROM_read (1 -> _i `uc `ui ]
+[e = _ee -> ( _EEPROM_read (1 _i `ui ]
 "59
-[; ;recept.c: 59:         valor += ee * i;
 [e =+ _valor -> * _ee -> _i `ui `ul ]
 "60
-[; ;recept.c: 60:         divisao += ee;
 [e =+ _divisao -> _ee `ul ]
 "61
-[; ;recept.c: 61:     }
 }
+"55
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 149  ]
 [e :U 150 ]
+"61
 }
 "62
-[; ;recept.c: 62:     unsigned char retorno =(valor/divisao);
 [v _retorno `uc ~T0 @X0 1 a ]
 [e = _retorno -> / _valor _divisao `uc ]
 "63
-[; ;recept.c: 63:     return retorno;
 [e ) _retorno ]
 [e $UE 148  ]
 "64
-[; ;recept.c: 64: }
 [e :UE 148 ]
 }
 "67
-[; ;recept.c: 67: unsigned char moda(void)
 [v _moda `(uc ~T0 @X0 1 ef ]
 "68
-[; ;recept.c: 68: {
 {
 [e :U _moda ]
 [f ]
 "69
-[; ;recept.c: 69:     unsigned int Mvalor = 0;
 [v _Mvalor `ui ~T0 @X0 1 a ]
 [e = _Mvalor -> -> 0 `i `ui ]
 "70
-[; ;recept.c: 70:     unsigned int valor = 0;
 [v _valor `ui ~T0 @X0 1 a ]
 [e = _valor -> -> 0 `i `ui ]
 "71
-[; ;recept.c: 71:     unsigned char temp = 0;
 [v _temp `uc ~T0 @X0 1 a ]
 [e = _temp -> -> 0 `i `uc ]
 "72
-[; ;recept.c: 72:     for(char i=0; i<100; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 153  ]
 [e $U 154  ]
-[e :U 153 ]
 "73
-[; ;recept.c: 73:     {
+[e :U 153 ]
 {
 "74
-[; ;recept.c: 74:         valor = EEPROM_read(i);
-[e = _valor -> ( _EEPROM_read (1 -> _i `uc `ui ]
+[e = _valor -> ( _EEPROM_read (1 _i `ui ]
 "75
-[; ;recept.c: 75:         if(Mvalor<valor)
 [e $ ! < _Mvalor _valor 156  ]
 "76
-[; ;recept.c: 76:         {
 {
 "77
-[; ;recept.c: 77:             Mvalor = valor;
 [e = _Mvalor _valor ]
 "78
-[; ;recept.c: 78:             temp=i;
-[e = _temp -> _i `uc ]
+[e = _temp _i ]
 "79
-[; ;recept.c: 79:         }
 }
 [e :U 156 ]
 "80
-[; ;recept.c: 80:     }
 }
+"72
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 153  ]
 [e :U 154 ]
+"80
 }
 "81
-[; ;recept.c: 81:     return (temp);
 [e ) _temp ]
 [e $UE 152  ]
 "82
-[; ;recept.c: 82: }
 [e :UE 152 ]
 }
 "85
-[; ;recept.c: 85: unsigned char mediana(void)
 [v _mediana `(uc ~T0 @X0 1 ef ]
 "86
-[; ;recept.c: 86: {
 {
 [e :U _mediana ]
 [f ]
 "87
-[; ;recept.c: 87:     unsigned long ee = 0;
 [v _ee `ul ~T0 @X0 1 a ]
 [e = _ee -> -> -> 0 `i `l `ul ]
 "88
-[; ;recept.c: 88:     unsigned long ee2 = 0;
 [v _ee2 `ul ~T0 @X0 1 a ]
 [e = _ee2 -> -> -> 0 `i `l `ul ]
 "89
-[; ;recept.c: 89:     for(char i=0; i<100; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 158  ]
 [e $U 159  ]
-[e :U 158 ]
 "90
-[; ;recept.c: 90:     {
+[e :U 158 ]
 {
 "91
-[; ;recept.c: 91:         ee +=EEPROM_read(i);
-[e =+ _ee -> -> ( _EEPROM_read (1 -> _i `uc `l `ul ]
+[e =+ _ee -> -> ( _EEPROM_read (1 _i `l `ul ]
 "92
-[; ;recept.c: 92:     }
 }
+"89
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 158  ]
 [e :U 159 ]
+"92
 }
 "93
-[; ;recept.c: 93:     for(unsigned char i=0; i<100; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 161  ]
 [e $U 162  ]
-[e :U 161 ]
 "94
-[; ;recept.c: 94:     {
+[e :U 161 ]
 {
 "95
-[; ;recept.c: 95:         ee2 +=EEPROM_read(i);
 [e =+ _ee2 -> -> ( _EEPROM_read (1 _i `l `ul ]
 "96
-[; ;recept.c: 96:             if(ee2 >= (ee/2))
 [e $ ! >= _ee2 / _ee -> -> -> 2 `i `l `ul 164  ]
 "97
-[; ;recept.c: 97:             {
 {
 "98
-[; ;recept.c: 98:                return i;
 [e ) _i ]
 [e $UE 157  ]
 "99
-[; ;recept.c: 99:                break;
 [e $U 162  ]
 "100
-[; ;recept.c: 100:             }
 }
 [e :U 164 ]
 "101
-[; ;recept.c: 101:     }
 }
+"93
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 161  ]
 [e :U 162 ]
+"101
 }
 "102
-[; ;recept.c: 102:     return -1;
 [e ) -> -U -> 1 `i `uc ]
 [e $UE 157  ]
 "103
-[; ;recept.c: 103: }
 [e :UE 157 ]
 }
 "105
-[; ;recept.c: 105: void EEPROM_write(unsigned char pont,unsigned int value)
 [v _EEPROM_write `(v ~T0 @X0 1 ef2`uc`ui ]
 "106
-[; ;recept.c: 106: {
 {
 [e :U _EEPROM_write ]
 "105
-[; ;recept.c: 105: void EEPROM_write(unsigned char pont,unsigned int value)
 [v _pont `uc ~T0 @X0 1 r1 ]
 [v _value `ui ~T0 @X0 1 r2 ]
 "106
-[; ;recept.c: 106: {
 [f ]
 "107
-[; ;recept.c: 107:     EEPROM_WriteByte(pont,value/256);
 [e ( _EEPROM_WriteByte (2 , _pont -> / _value -> -> 256 `i `ui `uc ]
 "108
-[; ;recept.c: 108:     EEPROM_WriteByte(pont+100,value%256);
 [e ( _EEPROM_WriteByte (2 , -> + -> _pont `i -> 100 `i `uc -> % _value -> -> 256 `i `ui `uc ]
 "109
-[; ;recept.c: 109: }
 [e :UE 165 ]
 }
 "110
-[; ;recept.c: 110: int EEPROM_read(unsigned char pont)
 [v _EEPROM_read `(i ~T0 @X0 1 ef1`uc ]
 "111
-[; ;recept.c: 111: {
 {
 [e :U _EEPROM_read ]
 "110
-[; ;recept.c: 110: int EEPROM_read(unsigned char pont)
 [v _pont `uc ~T0 @X0 1 r1 ]
 "111
-[; ;recept.c: 111: {
 [f ]
 "112
-[; ;recept.c: 112:        return ((EEPROM_ReadByte(pont)*256)+EEPROM_ReadByte(pont+100));
 [e ) + * -> ( _EEPROM_ReadByte (1 _pont `i -> 256 `i -> ( _EEPROM_ReadByte (1 -> + -> _pont `i -> 100 `i `uc `i ]
 [e $UE 166  ]
 "113
-[; ;recept.c: 113: }
 [e :UE 166 ]
 }
 "115
-[; ;recept.c: 115: void EEPROM_WriteByte(unsigned char eepromAddress, unsigned char eepromData)
 [v _EEPROM_WriteByte `(v ~T0 @X0 1 ef2`uc`uc ]
 "116
-[; ;recept.c: 116: {
 {
 [e :U _EEPROM_WriteByte ]
 "115
-[; ;recept.c: 115: void EEPROM_WriteByte(unsigned char eepromAddress, unsigned char eepromData)
 [v _eepromAddress `uc ~T0 @X0 1 r1 ]
 [v _eepromData `uc ~T0 @X0 1 r2 ]
 "116
-[; ;recept.c: 116: {
 [f ]
 "117
-[; ;recept.c: 117:     unsigned char gie_Status;
 [v _gie_Status `uc ~T0 @X0 1 a ]
 "118
-[; ;recept.c: 118:     while(WR);
 [e $U 168  ]
 [e :U 169 ]
 [e :U 168 ]
 [e $ _WR 169  ]
 [e :U 170 ]
 "119
-[; ;recept.c: 119:     EEADR=eepromAddress;
 [e = _EEADR _eepromAddress ]
 "120
-[; ;recept.c: 120:     EEDATA=eepromData;
 [e = _EEDATA _eepromData ]
 "121
-[; ;recept.c: 121:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
 "122
-[; ;recept.c: 122:     WREN=1;
 [e = _WREN -> -> 1 `i `b ]
 "123
-[; ;recept.c: 123:     gie_Status = GIE;
-[e = _gie_Status -> _GIE `uc ]
+[e = _gie_Status -> -> _GIE `i `uc ]
 "124
-[; ;recept.c: 124:     GIE = 0;
 [e = _GIE -> -> 0 `i `b ]
 "125
-[; ;recept.c: 125:     EECON2=0x55;
 [e = _EECON2 -> -> 85 `i `uc ]
 "126
-[; ;recept.c: 126:     EECON2=0xaa;
 [e = _EECON2 -> -> 170 `i `uc ]
 "127
-[; ;recept.c: 127:     WR=1;
 [e = _WR -> -> 1 `i `b ]
 "128
-[; ;recept.c: 128:     GIE = gie_Status;
 [e = _GIE -> _gie_Status `b ]
 "129
-[; ;recept.c: 129:     delay(1);
 [e ( _delay (1 -> -> 1 `i `ui ]
 "130
-[; ;recept.c: 130:     WREN=0;
 [e = _WREN -> -> 0 `i `b ]
 "131
-[; ;recept.c: 131: }
 [e :UE 167 ]
 }
 "132
-[; ;recept.c: 132: unsigned char EEPROM_ReadByte(unsigned char eepromAddress)
 [v _EEPROM_ReadByte `(uc ~T0 @X0 1 ef1`uc ]
 "133
-[; ;recept.c: 133: {
 {
 [e :U _EEPROM_ReadByte ]
 "132
-[; ;recept.c: 132: unsigned char EEPROM_ReadByte(unsigned char eepromAddress)
 [v _eepromAddress `uc ~T0 @X0 1 r1 ]
 "133
-[; ;recept.c: 133: {
 [f ]
 "134
-[; ;recept.c: 134:     while(RD || WR);
 [e $U 172  ]
 [e :U 173 ]
 [e :U 172 ]
 [e $ || _RD _WR 173  ]
 [e :U 174 ]
 "135
-[; ;recept.c: 135:     EEADR=eepromAddress;
 [e = _EEADR _eepromAddress ]
 "136
-[; ;recept.c: 136:     EECON1bits.EEPGD = 0;
 [e = . . _EECON1bits 0 5 -> -> 0 `i `uc ]
 "137
-[; ;recept.c: 137:     RD = 1;
 [e = _RD -> -> 1 `i `b ]
 "138
-[; ;recept.c: 138:     return(EEDATA);
 [e ) _EEDATA ]
 [e $UE 171  ]
 "139
-[; ;recept.c: 139: }
 [e :UE 171 ]
 }
 "140
-[; ;recept.c: 140: void tmron(void)
 [v _tmron `(v ~T0 @X0 1 ef ]
 "141
-[; ;recept.c: 141: {
 {
 [e :U _tmron ]
 [f ]
 "142
-[; ;recept.c: 142:     TMR1IE=1;
 [e = _TMR1IE -> -> 1 `i `b ]
 "143
-[; ;recept.c: 143:     GIE=1;
 [e = _GIE -> -> 1 `i `b ]
 "144
-[; ;recept.c: 144:     PEIE=1;
 [e = _PEIE -> -> 1 `i `b ]
 "145
-[; ;recept.c: 145:     TMR1L = TMR1H = 0x00;
 [e = _TMR1L = _TMR1H -> -> 0 `i `uc ]
 "146
-[; ;recept.c: 146:     T1CON = 0b00110001;
 [e = _T1CON -> -> 49 `i `uc ]
 "147
-[; ;recept.c: 147: }
 [e :UE 175 ]
 }

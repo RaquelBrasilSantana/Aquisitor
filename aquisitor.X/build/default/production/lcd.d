@@ -1,2 +1,1 @@
-build/default/production\lcd.p1: lcd.c config.h delay.h lcd.h \
-  leitorLM35_v07.h recept.h
+ build/default/production/lcd.d  build/default/production/lcd.p1:  lcd.c lcd.h config.h recept.h leitorLM35_v07.h delay.h

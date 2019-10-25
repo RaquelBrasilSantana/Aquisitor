@@ -1,2 +1,1 @@
-build/default/production\leitorLM35_v07.p1: leitorLM35_v07.c config.h \
-  delay.h
+ build/default/production/leitorLM35_v07.d  build/default/production/leitorLM35_v07.p1:  leitorLM35_v07.c config.h delay.h

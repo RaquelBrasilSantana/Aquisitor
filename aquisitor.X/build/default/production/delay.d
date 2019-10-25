@@ -1,1 +1,1 @@
-build/default/production\delay.p1: delay.c config.h
+ build/default/production/delay.d  build/default/production/delay.p1:  delay.c config.h

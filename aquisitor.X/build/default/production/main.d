@@ -1,2 +1,1 @@
-build/default/production\main.p1: main.c config.h delay.h lcd.h teclado.h \
-  leitorLM35_v07.h recept.h
+ build/default/production/main.d  build/default/production/main.p1:  main.c lcd.h config.h recept.h leitorLM35_v07.h delay.h teclado.h

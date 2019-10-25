@@ -18,9 +18,11 @@ void __interrupt() myISR(void)
 {  
     if(TMR1IF)
     {
-        repeat++;
+
         TMR1IF = 0;
-        TMR1L = TMR1H = 0x00;       
+        TMR1L = TMR1H = 0x00;    
+        repeat++;
+        
         if(repeat >=2861)
         {
             salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
