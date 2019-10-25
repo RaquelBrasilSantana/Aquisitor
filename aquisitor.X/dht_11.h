@@ -1,45 +1,45 @@
-# Ifndef ONEWIRE_DHT11
-# define  ONEWIRE_DHT11
+#ifndef ONEWIRE_DHT11
+#define ONEWIRE_DHT11
 
- união typedef 
+typedef union 
 {
     struct 
     {
-         char não assinado ;
-        unsigned  de char temperatura;
-         char não assinado ;
-         característica não assinada;
+        unsigned char ;
+        unsigned char temperatura;
+        unsigned char ; 
+        unsigned char umidade;
     };
     struct
     {
-         longa assinado_temperatura ;
+        unsigned long umidade_temperatura;
     };
-DHT;
+} DHT;
 
 
-void  initDHT11 ( void );
- char  dht não assinado (DHT * ptr);
+void initDHT11( void );
+unsigned char dht( DHT * ptr );
 
 
 
-/ * ***************** Como usar?
- * vazio principal (vazio)
+/****************** Como usar?
+ * void main( void )
  * {
-* Sensor DHT; // Declaração da variável com o tipo que recebe
- * // dados lidos pelo sensor de temperatura e 
- * // densidade.
+ *     DHT sensor;             // Declaração da variável com o tipo que receberá 
+ *                             // os dados lidos pelo sensor de temperatura e 
+ *                             // umidade.
  *  
-* initDHT11 (); // Inicialização / Habilitação do pino ligado ao sensor
+ *     initDHT11();            // Inicialização/Habilitação do pino ligado ao sensor
  *     
  *     
- * if (dht (& sensor)) // Chamada da rotina com endereço da variável de 
- * // destino para os dados.
- * // Se o retorno for verdadeiro, os dados estão íntegros.
- * {
-* sensor.temperatura; // Valor da temperatura [ºC].
-* sensor.umidade; // Valor da densidade [%].
- *}
- *}
- * /
+ *     if( dht( &sensor ) )    // Chamada da rotina com endereço da variável de 
+ *                             // destino para os dados.
+ *                             // Se o retorno for verdadeiro, os dados estão íntegros.
+ *     {
+ *         sensor.temperatura; // Valor da temperatura [ºC].
+ *         sensor.umidade;     // Valor da umidade [%].
+ *     }
+ * }
+ */
 
-# endif
+#endif
