@@ -1,17 +1,17 @@
 
 # 1 "lcd.c"
 
-# 18 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\xc.h"
+# 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 52 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h"
+# 52 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h"
 extern volatile unsigned char INDF __at(0x000);
 
 asm("INDF equ 00h");
@@ -2464,7 +2464,7 @@ extern volatile __bit nW __at(0x4A2);
 extern volatile __bit nWRITE __at(0x4A2);
 
 
-# 30 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h"
+# 30 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -2475,12 +2475,12 @@ __attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longe
 
 __attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_erase(unsigned short addr);
 
-# 114 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\eeprom_routines.h"
+# 114 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 
 
-# 91 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h"
+# 91 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -2554,10 +2554,10 @@ unsigned int adcLer(void);
 
 unsigned char temperaturaLer(void);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\__size_t.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdarg.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -2566,17 +2566,17 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h"
 struct __prbuf
 {
 char * ptr;
 void (* func)(char);
 };
 
-# 29 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\errno.h"
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\errno.h"
 extern int errno;
 
-# 12 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\conio.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -2590,7 +2590,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 88 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
+# 88 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -2738,8 +2738,10 @@ writeLCD(3,1, "[A] [B] [C]");
 void Telaprincipal(void)
 {
 
-writeLCD(0,0, "Temp. Atual:   C");
-gotoxy(14,0);putLCD(0xDF);
+char texto[16]="Temp. Atual:   C";
+texto[14]=0xDF;
+writeLCD(0,0, texto);
+
 
 
 }

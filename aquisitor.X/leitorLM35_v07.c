@@ -43,9 +43,11 @@ unsigned int adcLer(void)
 
 unsigned char temperaturaLer(void) 
 {
+    GIE = 0;
     unsigned int temp01VlrInt;                                                  // Variavel local tipo inteira, não inicializada
     unsigned int temp01VlrTmp;							// Temperatura: de 0 até 150°C (Full range: de -55 a 150°C)
     temp01VlrInt = adcLer();							// Lê o resultado e...
     temp01VlrTmp =(unsigned int) (temp01VlrInt * 0.48875);                      // Converte em temperatura Celsius
+    GIE = 1;
     return temp01VlrTmp;
 }

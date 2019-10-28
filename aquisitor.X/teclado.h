@@ -39,6 +39,7 @@ void tecladoIniciar(void)
 
 unsigned char tecladoLer(void)							// Loop infinito. Inicio...
 {
+    GIE = 0;
     tecC4=1,tecC3=1,tecC2=1,tecC1=0;					// Ativa somente a 1ª coluna.
     NOP();NOP();								// NOP=Sem operação. Perde tempo para estabilizar.
     if(!tecL1)	tecAtual = tabTeclas[0];				// Se a primeira linha for ativada, guardar este caracter.
@@ -71,11 +72,13 @@ unsigned char tecladoLer(void)							// Loop infinito. Inicio...
     if(tecAtual!=tecAnterior)						// Verifica se a tecla atual é diferente da anterior...
     {
         tecAnterior=tecAtual;						// ...se for salva atual e ... 
+        GIE = 1;
         return tecAtual;							// ...retorna com o novo valor...
     }
     else									// ...se não...
     {
 	tecAtual=0x00;							// Salva como não acionada ou não liberada.
+    GIE = 1;
         return tecAtual;							// ...retorna com o valor.
     }
 }

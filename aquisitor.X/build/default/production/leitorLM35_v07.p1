@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1416 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+"1416 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "3587
 [v _ADIF `Vb ~T0 @X0 0 e@102 ]
@@ -13,7 +13,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "11 delay.h
 [v _delay `(v ~T0 @X0 0 ef1`ui ]
-"1251 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+"1251 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
 [n S45 . ADON GO_nDONE CHS ADCS ]
 "1257
@@ -34,7 +34,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
 "2970
 [v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+"3896
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [; <" INDF equ 00h ;# ">
 "61
 [; <" TMR0 equ 01h ;# ">
@@ -266,16 +268,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _temperaturaLer ]
 [f ]
 "46
-[v _temp01VlrInt `ui ~T0 @X0 1 a ]
+[e = _GIE -> -> 0 `i `b ]
 "47
-[v _temp01VlrTmp `ui ~T0 @X0 1 a ]
+[v _temp01VlrInt `ui ~T0 @X0 1 a ]
 "48
-[e = _temp01VlrInt ( _adcLer ..  ]
+[v _temp01VlrTmp `ui ~T0 @X0 1 a ]
 "49
-[e = _temp01VlrTmp -> * -> _temp01VlrInt `d .0.48875 `ui ]
+[e = _temp01VlrInt ( _adcLer ..  ]
 "50
+[e = _temp01VlrTmp -> * -> _temp01VlrInt `d .0.48875 `ui ]
+"51
+[e = _GIE -> -> 1 `i `b ]
+"52
 [e ) -> _temp01VlrTmp `uc ]
 [e $UE 143  ]
-"51
+"53
 [e :UE 143 ]
 }

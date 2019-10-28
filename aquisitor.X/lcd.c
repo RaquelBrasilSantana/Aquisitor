@@ -79,10 +79,10 @@ void gotoxy( unsigned char x, unsigned char y )
         cmdLCD((LCD_GOTOL0 | LCD_GOTOL1 * y) + (x & 0X3F));    
 }
 void writeLCD( unsigned char x, unsigned char y, const char * ptr )
-{
+{       
         gotoxy(x,y);
         while( *ptr )
-        putLCD( *ptr++ );    
+        putLCD( *ptr++ );
 }
 
 char lcdb0(void)
@@ -114,9 +114,11 @@ void Menu(void)
 
 void Telaprincipal(void)
 {
-
-    writeLCD(0,0, "Temp. Atual:   C");
-    gotoxy(14,0);putLCD(0xDF);
+    
+    char texto[16]="Temp. Atual:   C";
+    texto[14]=0xDF;
+    writeLCD(0,0, texto);
+    //gotoxy(14,0);putLCD(0xDF);
     
     
 }

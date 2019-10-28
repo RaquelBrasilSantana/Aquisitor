@@ -1,17 +1,17 @@
 
 # 1 "main.c"
 
-# 18 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\xc.h"
+# 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 52 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h"
+# 52 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h"
 extern volatile unsigned char INDF __at(0x000);
 
 asm("INDF equ 00h");
@@ -2464,7 +2464,7 @@ extern volatile __bit nW __at(0x4A2);
 extern volatile __bit nWRITE __at(0x4A2);
 
 
-# 30 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h"
+# 30 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -2475,12 +2475,12 @@ __attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longe
 
 __attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_erase(unsigned short addr);
 
-# 114 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\eeprom_routines.h"
+# 114 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 
 
-# 91 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h"
+# 91 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -2568,6 +2568,7 @@ tecAtual=0x00;
 
 unsigned char tecladoLer(void)
 {
+GIE = 0;
 PORTBbits.RB7=1,PORTBbits.RB6=1,PORTBbits.RB5=1,PORTBbits.RB4=0;
 __nop();__nop();
 if(!PORTBbits.RB0) tecAtual = tabTeclas[0];
@@ -2600,11 +2601,13 @@ else if(!PORTBbits.RB3) tecAtual = tabTeclas[15];
 if(tecAtual!=tecAnterior)
 {
 tecAnterior=tecAtual;
+GIE = 1;
 return tecAtual;
 }
 else
 {
 tecAtual=0x00;
+GIE = 1;
 return tecAtual;
 }
 }
@@ -2616,10 +2619,10 @@ unsigned int adcLer(void);
 
 unsigned char temperaturaLer(void);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\__size_t.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdarg.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -2628,17 +2631,17 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h"
 struct __prbuf
 {
 char * ptr;
 void (* func)(char);
 };
 
-# 29 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\errno.h"
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\errno.h"
 extern int errno;
 
-# 12 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\conio.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -2652,7 +2655,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 88 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
+# 88 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -2692,24 +2695,35 @@ unsigned char EEPROM_ReadByte(unsigned char eepromAddress);
 void tmron(void);
 char looptmr(void);
 
-# 14 "main.c"
+# 13 "main.c"
+char nr = 0;
 char tim = 1;
 int repeat = 0;
-
+int Controle_do_retorno = 0;
 void __interrupt() myISR(void)
 {
 if(TMR1IF)
 {
 
 TMR1IF = 0;
+T1CONbits.TMR1ON=0;
 TMR1L = TMR1H = 0x00;
 repeat++;
-
 if(repeat >=2861)
 {
-salvatemp(temperaturaLer());
 repeat = 0;
+salvatemp(temperaturaLer());
 }
+if(repeat%10 == 0 && tim == 1){
+tempatt();
+}
+if(tim == 2 && ((repeat - Controle_do_retorno)>20)){
+Telaprincipal();
+tempatt();
+tim = 1;
+Controle_do_retorno = 0;
+}
+T1CONbits.TMR1ON=1;
 }
 }
 
@@ -2717,7 +2731,6 @@ void main(void)
 {
 TRISC=0x00;
 PORTC=0;
-char nr;
 
 initLCD();
 tecladoIniciar();
@@ -2735,17 +2748,13 @@ cmdLCD(0x01);
 
 tmron();
 Telaprincipal();
-
+tempatt();
 while ( 1 )
 {
 
+
 nr = tecladoLer();
-
-if (tim == 1)
-{
-tempatt();
-}
-
+delay(15);
 if(nr != 0)
 {
 putLCD(nr);
@@ -2756,31 +2765,40 @@ switch (nr)
 {
 
 case 'A':
+GIE = 0;
 cmdLCD(0x01);
-adcLer();
-temperaturaLer();
 Telaprincipal();
+tempatt();
 tim = 1;
+GIE = 1;
 break;
 
 case 'B':
+GIE = 0;
+tim = 0;
 cmdLCD(0x01);
 TempMed();
-tim = 0;
+GIE = 1;
 break;
 
 case '*':
+GIE = 0;
+tim = 2;
 cmdLCD(0x01);
-salvatemp(temperaturaLer());
 showtemp ();
-tim = 0;
+salvatemp(temperaturaLer());
+Controle_do_retorno = repeat;
+GIE = 1;
 break;
 
 case '#':
+GIE = 0;
+tim = 2;
 cmdLCD(0x01);
 erasertemp();
 resetemp();
-tim = 0;
+Controle_do_retorno = repeat;
+GIE = 1;
 break;
 
 }

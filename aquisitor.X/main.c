@@ -10,24 +10,34 @@
 #define LEDVED PORTCbits.RC0
 #define LEDAMA PORTCbits.RC1
 #define LEDVEM PORTCbits.RC2
-
+char nr = 0;
 char tim = 1;
 int repeat = 0;
-
+int Controle_do_retorno = 0;
 void __interrupt() myISR(void)
 {  
     if(TMR1IF)
     {
 
         TMR1IF = 0;
+        T1CONbits.TMR1ON=0;
         TMR1L = TMR1H = 0x00;    
         repeat++;
-        
         if(repeat >=2861)
         {
-            salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
             repeat = 0;
+            salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
         }
+        if(repeat%10 == 0 && tim == 1){
+                tempatt(); 
+        }
+        if(tim == 2 && ((repeat - Controle_do_retorno)>20)){
+            Telaprincipal(); 
+            tempatt();
+            tim = 1;
+            Controle_do_retorno = 0;
+        }
+        T1CONbits.TMR1ON=1;
     }
 }
 
@@ -35,7 +45,6 @@ void main(void)
 {
     TRISC=0x00;
     PORTC=0;
-    char nr;
     
     initLCD();
     tecladoIniciar();
@@ -53,17 +62,13 @@ void main(void)
  
     tmron();
     Telaprincipal();
-    
+    tempatt(); 
    while ( 1 )
     {
       
+       
        nr = tecladoLer();
-       
-       if (tim == 1)
-       {         
-           tempatt(); 
-       }
-       
+       delay(15);   
        if(nr != 0)
        {
            putLCD(nr);
@@ -73,32 +78,41 @@ void main(void)
        switch (nr)
        {
            
-           case 'A':        
+           case 'A':
+                GIE = 0;
                 cmdLCD(LCD_CLEAR);
-                adcLer();
-                temperaturaLer();
                 Telaprincipal(); 
+                tempatt(); 
                 tim = 1;
+                GIE = 1;
                 break;
                 
            case 'B':
+                GIE = 0;
+                tim = 0;
                 cmdLCD(LCD_CLEAR);
                 TempMed();
-                tim = 0;
+                GIE = 1;
                 break;
                 
            case '*':
+                GIE = 0;
+                tim = 2;  
                 cmdLCD(LCD_CLEAR);
-                salvatemp(temperaturaLer());  
-                showtemp ();                
-                tim = 0;  
+                showtemp ();
+                salvatemp(temperaturaLer());
+                Controle_do_retorno = repeat;
+                GIE = 1;
                 break;
                                             
             case '#':
+                GIE = 0;
+                tim = 2;
                 cmdLCD(LCD_CLEAR);
                 erasertemp();
                 resetemp();
-                tim = 0;
+                Controle_do_retorno = repeat;
+                GIE = 1;
                 break;               
 
          }

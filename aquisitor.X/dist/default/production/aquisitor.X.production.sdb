@@ -1,62 +1,70 @@
-[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F887 ]
-[d frameptr 6 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
+[d frameptr 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awmod.c
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 [v i1___fltol __fltol `(l  1 e 4 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 [v i1___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul16.c
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 [v i1__Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 [v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"4 Z:\Aquisitor\aquisitor.X\delay.c
+"4 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\delay.c
 [v _delay delay `(v  1 e 1 0 ]
 [v i1_delay delay `(v  1 e 1 0 ]
-"13 Z:\Aquisitor\aquisitor.X\lcd.c
+"13 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 "33
 [v _cmdLCD cmdLCD `(v  1 e 1 0 ]
+[v i1_cmdLCD cmdLCD `(v  1 e 1 0 ]
 "60
 [v _putLCD putLCD `(v  1 e 1 0 ]
+[v i1_putLCD putLCD `(v  1 e 1 0 ]
 "77
 [v _gotoxy gotoxy `(v  1 e 1 0 ]
+[v i1_gotoxy gotoxy `(v  1 e 1 0 ]
 "81
 [v _writeLCD writeLCD `(v  1 e 1 0 ]
+[v i1_writeLCD writeLCD `(v  1 e 1 0 ]
 "97
 [v _SplashScreen0 SplashScreen0 `(v  1 e 1 0 ]
 "102
 [v _SplashScreen1 SplashScreen1 `(v  1 e 1 0 ]
 "115
 [v _Telaprincipal Telaprincipal `(v  1 e 1 0 ]
-"123
+[v i1_Telaprincipal Telaprincipal `(v  1 e 1 0 ]
+"125
 [v _tempatt tempatt `(v  1 e 1 0 ]
-"131
+[v i1_tempatt tempatt `(v  1 e 1 0 ]
+"133
 [v _TempMed TempMed `(v  1 e 1 0 ]
-"144
+"146
 [v _showtemp showtemp `(v  1 e 1 0 ]
-"151
+"153
 [v _erasertemp erasertemp `(v  1 e 1 0 ]
-"5 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
+"5 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\leitorLM35_v07.c
 [v _temperaturaInicializar temperaturaInicializar `(v  1 e 1 0 ]
 "22
 [v _adcLer adcLer `(ui  1 e 2 0 ]
@@ -64,11 +72,11 @@
 "44
 [v _temperaturaLer temperaturaLer `(uc  1 e 1 0 ]
 [v i1_temperaturaLer temperaturaLer `(uc  1 e 1 0 ]
-"17 Z:\Aquisitor\aquisitor.X\main.c
+"17 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\main.c
 [v _myISR myISR `II(v  1 e 1 0 ]
-"34
+"44
 [v _main main `(v  1 e 1 0 ]
-"33 Z:\Aquisitor\aquisitor.X\recept.c
+"33 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v _salvatemp salvatemp `(v  1 e 1 0 ]
 [v i1_salvatemp salvatemp `(v  1 e 1 0 ]
 "42
@@ -84,18 +92,18 @@
 "115
 [v _EEPROM_WriteByte EEPROM_WriteByte `(v  1 e 1 0 ]
 [v i1_EEPROM_WriteByte EEPROM_WriteByte `(v  1 e 1 0 ]
-"132
+"131
 [v _EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
 [v i1_EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
-"140
+"139
 [v _tmron tmron `(v  1 e 1 0 ]
-"25 Z:\Aquisitor\aquisitor.X\teclado.h
+"25 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\teclado.h
 [v _tecladoIniciar tecladoIniciar `(v  1 e 1 0 ]
 "40
 [v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
-"228 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+"228 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S232 . 1 `uc 1 RB0 1 0 :1:0 
+[s S235 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -105,8 +113,8 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S241 . 1 `S232 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES241  1 e 1 @6 ]
+[u S244 . 1 `S235 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES244  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "657
@@ -115,17 +123,39 @@
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
 "671
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
+[s S261 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1GE 1 0 :1:6 
+`uc 1 T1GINV 1 0 :1:7 
+]
+"700
+[s S269 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T1GIV 1 0 :1:7 
+]
+[s S277 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+]
+[u S280 . 1 `S261 1 . 1 0 `S269 1 . 1 0 `S277 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES280  1 e 1 @16 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1245
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S136 . 1 `uc 1 ADON 1 0 :1:0 
+[s S137 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S141 . 1 `uc 1 . 1 0 :1:0 
+[s S142 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -134,15 +164,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S150 . 1 `uc 1 . 1 0 :1:0 
+[s S151 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S153 . 1 `uc 1 . 1 0 :1:0 
+[s S154 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S156 . 1 `S136 1 . 1 0 `S141 1 . 1 0 `S150 1 . 1 0 `S153 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES156  1 e 1 @31 ]
-[s S203 . 1 `uc 1 PS 1 0 :3:0 
+[u S157 . 1 `S137 1 . 1 0 `S142 1 . 1 0 `S151 1 . 1 0 `S154 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES157  1 e 1 @31 ]
+[s S205 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -150,12 +180,12 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S210 . 1 `uc 1 PS0 1 0 :1:0 
+[s S212 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S214 . 1 `S203 1 . 1 0 `S210 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES214  1 e 1 @129 ]
+[u S216 . 1 `S205 1 . 1 0 `S212 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES216  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
@@ -176,16 +206,6 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S357 . 1 `uc 1 RD 1 0 :1:0 
-`uc 1 WR 1 0 :1:1 
-`uc 1 WREN 1 0 :1:2 
-`uc 1 WRERR 1 0 :1:3 
-`uc 1 . 1 0 :3:4 
-`uc 1 EEPGD 1 0 :1:7 
-]
-"3514
-[u S364 . 1 `S357 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES364  1 e 1 @396 ]
 "3544
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
 "3584
@@ -212,54 +232,56 @@
 `uc 1 B0 1 0 :1:6 
 `uc 1 B1 1 0 :1:7 
 ]
-"11 Z:\Aquisitor\aquisitor.X\lcd.c
+"11 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [u S36 . 1 `S30 1 . 1 0 ]
 [v _LCD LCD `VES36  1 e 1 @8 ]
-"14 Z:\Aquisitor\aquisitor.X\main.c
+"13 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\main.c
+[v _nr nr `uc  1 e 1 0 ]
+"14
 [v _tim tim `uc  1 e 1 0 ]
 "15
 [v _repeat repeat `i  1 e 2 0 ]
-"20 Z:\Aquisitor\aquisitor.X\teclado.h
+"16
+[v _Controle_do_retorno Controle_do_retorno `i  1 e 2 0 ]
+"20 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\teclado.h
 [v _tecAnterior tecAnterior `uc  1 e 1 0 ]
 "21
 [v _tecAtual tecAtual `uc  1 e 1 0 ]
 "23
 [v _tabTeclas tabTeclas `DC[16]uc  1 e 16 0 ]
-"34 Z:\Aquisitor\aquisitor.X\main.c
+"44 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"38
-[v main@nr nr `uc  1 a 1 63 ]
-"109
+"123
 } 0
-"140 Z:\Aquisitor\aquisitor.X\recept.c
+"139 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v _tmron tmron `(v  1 e 1 0 ]
 {
-"147
+"146
 } 0
-"5 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
+"5 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\leitorLM35_v07.c
 [v _temperaturaInicializar temperaturaInicializar `(v  1 e 1 0 ]
 {
 "20
 } 0
-"123 Z:\Aquisitor\aquisitor.X\lcd.c
+"125 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [v _tempatt tempatt `(v  1 e 1 0 ]
 {
-"126
+"128
 [v tempatt@Tp Tp `[3]uc  1 a 3 57 ]
-"125
+"127
 [v tempatt@temp temp `i  1 a 2 60 ]
-[v tempatt@F1429 F1429 `[3]uc  1 s 3 F1429 ]
-"130
+[v tempatt@F1431 F1431 `[3]uc  1 s 3 F1431 ]
+"132
 } 0
-"44 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
+"44 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\leitorLM35_v07.c
 [v _temperaturaLer temperaturaLer `(uc  1 e 1 0 ]
 {
-"47
+"48
 [v temperaturaLer@temp01VlrTmp temp01VlrTmp `ui  1 a 2 53 ]
-"46
+"47
 [v temperaturaLer@temp01VlrInt temp01VlrInt `ui  1 a 2 51 ]
-"51
+"53
 } 0
 "22
 [v _adcLer adcLer `(ui  1 e 2 0 ]
@@ -268,7 +290,7 @@
 [v adcLer@adc01Temp adc01Temp `ui  1 a 2 6 ]
 "42
 } 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
@@ -283,7 +305,7 @@
 [v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
@@ -293,20 +315,20 @@
 [v ___fltol@f1 f1 `d  1 p 4 40 ]
 "70
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S704 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S746 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S709 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S712 . 4 `l 1 i 4 0 `d 1 f 4 0 `S704 1 fAsBytes 4 0 `S709 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S712  1 a 4 34 ]
+[s S751 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S754 . 4 `l 1 i 4 0 `d 1 f 4 0 `S746 1 fAsBytes 4 0 `S751 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S754  1 a 4 34 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S781 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S823 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S784 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S781 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S784  1 a 2 38 ]
+[u S826 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S823 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S826  1 a 2 38 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 33 ]
 "11
@@ -318,7 +340,7 @@
 [v ___flmul@a a `d  1 p 4 18 ]
 "205
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 {
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
@@ -332,38 +354,38 @@
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
-"40 Z:\Aquisitor\aquisitor.X\teclado.h
+"40 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\teclado.h
 [v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
 {
-"81
+"84
 } 0
 "25
 [v _tecladoIniciar tecladoIniciar `(v  1 e 1 0 ]
 {
 "38
 } 0
-"144 Z:\Aquisitor\aquisitor.X\lcd.c
+"146 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [v _showtemp showtemp `(v  1 e 1 0 ]
 {
-"150
+"152
 } 0
-"33 Z:\Aquisitor\aquisitor.X\recept.c
+"33 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v _salvatemp salvatemp `(v  1 e 1 0 ]
 {
 [v salvatemp@temp temp `uc  1 a 1 wreg ]
 "35
-[v salvatemp@valor valor `ui  1 a 2 11 ]
+[v salvatemp@valor valor `ui  1 a 2 7 ]
 "33
 [v salvatemp@temp temp `uc  1 a 1 wreg ]
 "36
-[v salvatemp@temp temp `uc  1 a 1 13 ]
+[v salvatemp@temp temp `uc  1 a 1 9 ]
 "39
 } 0
 "42
 [v _resetemp resetemp `(v  1 e 1 0 ]
 {
 "44
-[v resetemp@i i `uc  1 a 1 12 ]
+[v resetemp@i i `uc  1 a 1 8 ]
 "48
 } 0
 "105
@@ -371,9 +393,9 @@
 {
 [v EEPROM_write@pont pont `uc  1 a 1 wreg ]
 [v EEPROM_write@pont pont `uc  1 a 1 wreg ]
-[v EEPROM_write@value value `ui  1 p 2 7 ]
+[v EEPROM_write@value value `ui  1 p 2 3 ]
 "107
-[v EEPROM_write@pont pont `uc  1 a 1 10 ]
+[v EEPROM_write@pont pont `uc  1 a 1 6 ]
 "109
 } 0
 "115
@@ -381,34 +403,34 @@
 {
 [v EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
 "117
-[v EEPROM_WriteByte@gie_Status gie_Status `uc  1 a 1 6 ]
+[v EEPROM_WriteByte@gie_Status gie_Status `uc  1 a 1 2 ]
 "115
 [v EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
-[v EEPROM_WriteByte@eepromData eepromData `uc  1 p 1 4 ]
-[v EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 5 ]
-"131
+[v EEPROM_WriteByte@eepromData eepromData `uc  1 p 1 0 ]
+[v EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 1 ]
+"130
 } 0
-"13 Z:\Aquisitor\aquisitor.X\lcd.c
+"13 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
 {
 "31
 } 0
-"151
+"153
 [v _erasertemp erasertemp `(v  1 e 1 0 ]
 {
-"154
+"156
 } 0
-"131
+"133
 [v _TempMed TempMed `(v  1 e 1 0 ]
 {
-"134
+"136
 [v TempMed@md md `[3]uc  1 a 3 35 ]
-"133
+"135
 [v TempMed@Media Media `uc  1 a 1 38 ]
-[v TempMed@F1433 F1433 `[3]uc  1 s 3 F1433 ]
-"142
+[v TempMed@F1435 F1435 `[3]uc  1 s 3 F1435 ]
+"144
 } 0
-"51 Z:\Aquisitor\aquisitor.X\recept.c
+"51 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v _media media `(uc  1 e 1 0 ]
 {
 "57
@@ -423,7 +445,7 @@
 [v media@retorno retorno `uc  1 a 1 28 ]
 "64
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul16.c
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
@@ -433,7 +455,7 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\__lldiv.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
@@ -445,7 +467,7 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"110 Z:\Aquisitor\aquisitor.X\recept.c
+"110 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v _EEPROM_read EEPROM_read `(i  1 e 2 0 ]
 {
 [v EEPROM_read@pont pont `uc  1 a 1 wreg ]
@@ -454,15 +476,15 @@
 [v EEPROM_read@pont pont `uc  1 a 1 5 ]
 "113
 } 0
-"132
+"131
 [v _EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
 {
 [v EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
 [v EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
 [v EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 0 ]
-"139
+"138
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awmod.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
@@ -473,7 +495,7 @@
 [v ___awmod@dividend dividend `i  1 p 2 2 ]
 "34
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
@@ -486,10 +508,14 @@
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"115 Z:\Aquisitor\aquisitor.X\lcd.c
+"115 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
 [v _Telaprincipal Telaprincipal `(v  1 e 1 0 ]
 {
-"122
+"118
+[v Telaprincipal@texto texto `[16]uc  1 a 16 20 ]
+"116
+[v Telaprincipal@F1427 F1427 `[16]uc  1 s 16 F1427 ]
+"124
 } 0
 "102
 [v _SplashScreen1 SplashScreen1 `(v  1 e 1 0 ]
@@ -554,23 +580,30 @@
 [v cmdLCD@cmd cmd `uc  1 a 1 5 ]
 "58
 } 0
-"4 Z:\Aquisitor\aquisitor.X\delay.c
+"4 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\delay.c
 [v _delay delay `(v  1 e 1 0 ]
 {
 [v delay@t t `ui  1 p 2 0 ]
 "11
 } 0
-"17 Z:\Aquisitor\aquisitor.X\main.c
+"17 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\main.c
 [v _myISR myISR `II(v  1 e 1 0 ]
 {
-"32
+"42
 } 0
-"44 Z:\Aquisitor\aquisitor.X\leitorLM35_v07.c
+"125 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
+[v i1_tempatt tempatt `(v  1 e 1 0 ]
+{
+[v i1tempatt@Tp tempatt `[3]uc  1 a 3 43 ]
+[v i1tempatt@temp tempatt `i  1 a 2 46 ]
+"132
+} 0
+"44 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\leitorLM35_v07.c
 [v i1_temperaturaLer temperaturaLer `(uc  1 e 1 0 ]
 {
 [v i1temperaturaLer@temp01VlrTmp temperaturaLer `ui  1 a 2 39 ]
 [v i1temperaturaLer@temp01VlrInt temperaturaLer `ui  1 a 2 37 ]
-"51
+"53
 } 0
 "22
 [v i1_adcLer adcLer `(ui  1 e 2 0 ]
@@ -578,7 +611,7 @@
 [v i1adcLer@adc01Temp adcLer `ui  1 a 2 6 ]
 "42
 } 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
 [v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v i1___xxtofl@sign sign `uc  1 a 1 wreg ]
@@ -590,7 +623,7 @@
 [v i1___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fltol.c
 [v i1___fltol __fltol `(l  1 e 4 0 ]
 {
 [v i1___fltol@exp1 __fltol `uc  1 a 1 36 ]
@@ -598,17 +631,17 @@
 [v i1___fltol@f1 f1 `d  1 p 4 26 ]
 "70
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v i1___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S704 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S709 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S712 . 4 `l 1 i 4 0 `d 1 f 4 0 `S704 1 fAsBytes 4 0 `S709 1 fAsWords 4 0 ]
-[v i1___flmul@prod __flmul `S712  1 a 4 20 ]
+[s S746 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S751 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S754 . 4 `l 1 i 4 0 `d 1 f 4 0 `S746 1 fAsBytes 4 0 `S751 1 fAsWords 4 0 ]
+[v i1___flmul@prod __flmul `S754  1 a 4 20 ]
 [v i1___flmul@grs __flmul `ul  1 a 4 14 ]
-[s S781 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S784 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S781 1 nAsBytes 2 0 ]
-[v i1___flmul@temp __flmul `S784  1 a 2 24 ]
+[s S823 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S826 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S823 1 nAsBytes 2 0 ]
+[v i1___flmul@temp __flmul `S826  1 a 2 24 ]
 [v i1___flmul@bexp __flmul `uc  1 a 1 19 ]
 [v i1___flmul@aexp __flmul `uc  1 a 1 18 ]
 [v i1___flmul@sign __flmul `uc  1 a 1 13 ]
@@ -616,7 +649,7 @@
 [v i1___flmul@a a `d  1 p 4 4 ]
 "205
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
 [v i1__Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 {
 [v i1__Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
@@ -627,14 +660,33 @@
 [v i1__Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
-"33 Z:\Aquisitor\aquisitor.X\recept.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+{
+[v i1___awmod@sign __awmod `uc  1 a 1 6 ]
+[v i1___awmod@counter __awmod `uc  1 a 1 5 ]
+[v i1___awmod@divisor divisor `i  1 p 2 0 ]
+[v i1___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+{
+[v i1___awdiv@quotient __awdiv `i  1 a 2 7 ]
+[v i1___awdiv@sign __awdiv `uc  1 a 1 6 ]
+[v i1___awdiv@counter __awdiv `uc  1 a 1 5 ]
+[v i1___awdiv@divisor divisor `i  1 p 2 0 ]
+[v i1___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"33 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\recept.c
 [v i1_salvatemp salvatemp `(v  1 e 1 0 ]
 {
 [v i1salvatemp@temp temp `uc  1 a 1 wreg ]
-[v i1salvatemp@valor salvatemp `ui  1 a 2 12 ]
+[v i1salvatemp@valor salvatemp `ui  1 a 2 8 ]
 [v i1salvatemp@temp temp `uc  1 a 1 wreg ]
 "36
-[v i1salvatemp@temp temp `uc  1 a 1 11 ]
+[v i1salvatemp@temp temp `uc  1 a 1 7 ]
 "39
 } 0
 "105
@@ -642,28 +694,22 @@
 {
 [v i1EEPROM_write@pont pont `uc  1 a 1 wreg ]
 [v i1EEPROM_write@pont pont `uc  1 a 1 wreg ]
-[v i1EEPROM_write@value value `ui  1 p 2 7 ]
+[v i1EEPROM_write@value value `ui  1 p 2 3 ]
 "107
-[v i1EEPROM_write@pont pont `uc  1 a 1 10 ]
+[v i1EEPROM_write@pont pont `uc  1 a 1 6 ]
 "109
 } 0
 "115
 [v i1_EEPROM_WriteByte EEPROM_WriteByte `(v  1 e 1 0 ]
 {
 [v i1EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
-[v i1EEPROM_WriteByte@gie_Status EEPROM_WriteByte `uc  1 a 1 6 ]
+[v i1EEPROM_WriteByte@gie_Status EEPROM_WriteByte `uc  1 a 1 2 ]
 [v i1EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
-[v i1EEPROM_WriteByte@eepromData eepromData `uc  1 p 1 4 ]
-[v i1EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 5 ]
-"131
+[v i1EEPROM_WriteByte@eepromData eepromData `uc  1 p 1 0 ]
+[v i1EEPROM_WriteByte@eepromAddress eepromAddress `uc  1 a 1 1 ]
+"130
 } 0
-"4 Z:\Aquisitor\aquisitor.X\delay.c
-[v i1_delay delay `(v  1 e 1 0 ]
-{
-[v i1delay@t t `ui  1 p 2 0 ]
-"11
-} 0
-"110 Z:\Aquisitor\aquisitor.X\recept.c
+"110
 [v i1_EEPROM_read EEPROM_read `(i  1 e 2 0 ]
 {
 [v i1EEPROM_read@pont pont `uc  1 a 1 wreg ]
@@ -672,11 +718,72 @@
 [v i1EEPROM_read@pont pont `uc  1 a 1 5 ]
 "113
 } 0
-"132
+"131
 [v i1_EEPROM_ReadByte EEPROM_ReadByte `(uc  1 e 1 0 ]
 {
 [v i1EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
 [v i1EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 wreg ]
 [v i1EEPROM_ReadByte@eepromAddress eepromAddress `uc  1 a 1 0 ]
-"139
+"138
+} 0
+"115 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\lcd.c
+[v i1_Telaprincipal Telaprincipal `(v  1 e 1 0 ]
+{
+[v i1Telaprincipal@texto Telaprincipal `[16]uc  1 a 16 6 ]
+"124
+} 0
+"81
+[v i1_writeLCD writeLCD `(v  1 e 1 0 ]
+{
+[v i1writeLCD@x x `uc  1 a 1 wreg ]
+[v i1writeLCD@x x `uc  1 a 1 wreg ]
+[v i1writeLCD@y y `uc  1 p 1 11 ]
+[v i1writeLCD@ptr ptr `*.26DCuc  1 p 2 12 ]
+"83
+[v i1writeLCD@x x `uc  1 a 1 1 ]
+"86
+} 0
+"60
+[v i1_putLCD putLCD `(v  1 e 1 0 ]
+{
+[v i1putLCD@c c `uc  1 a 1 wreg ]
+[s S45 . 1 `uc 1 LO 1 0 :4:0 
+`uc 1 HI 1 0 :4:4 
+]
+[u S48 . 1 `S45 1 . 1 0 `uc 1 HILO 1 0 ]
+[v i1putLCD@nibble putLCD `VES48  1 a 1 6 ]
+[v i1putLCD@c c `uc  1 a 1 wreg ]
+"64
+[v i1putLCD@c c `uc  1 a 1 5 ]
+"76
+} 0
+"77
+[v i1_gotoxy gotoxy `(v  1 e 1 0 ]
+{
+[v i1gotoxy@x x `uc  1 a 1 wreg ]
+[v i1gotoxy@x x `uc  1 a 1 wreg ]
+[v i1gotoxy@y y `uc  1 p 1 7 ]
+"79
+[v i1gotoxy@x x `uc  1 a 1 10 ]
+"80
+} 0
+"33
+[v i1_cmdLCD cmdLCD `(v  1 e 1 0 ]
+{
+[v i1cmdLCD@cmd cmd `uc  1 a 1 wreg ]
+[s S45 . 1 `uc 1 LO 1 0 :4:0 
+`uc 1 HI 1 0 :4:4 
+]
+[u S48 . 1 `S45 1 . 1 0 `uc 1 HILO 1 0 ]
+[v i1cmdLCD@nibble cmdLCD `VES48  1 a 1 5 ]
+[v i1cmdLCD@cmd cmd `uc  1 a 1 wreg ]
+"37
+[v i1cmdLCD@cmd cmd `uc  1 a 1 6 ]
+"58
+} 0
+"4 C:\Users\Raquel\MPLABXProjects\Aquisitor\aquisitor.X\delay.c
+[v i1_delay delay `(v  1 e 1 0 ]
+{
+[v i1delay@t t `ui  1 p 2 0 ]
+"11
 } 0
