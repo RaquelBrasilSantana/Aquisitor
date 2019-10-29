@@ -7,6 +7,7 @@
 #include "leitorLM35_v07.h"  
 //#include<pic16f877.h>
 #include "delay.h"
+#include "dht_11.h"
     
 /***************************************************************************************************************
     Cria funções para database de dados de medicacao do sensor de temperatura.

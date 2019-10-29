@@ -72,6 +72,7 @@ void main(void)
     Telaprincipal();
     tempatt(); 
     
+
     
    while ( 1 )
     {          
@@ -80,7 +81,9 @@ void main(void)
        if(nr != 0)
        {
            putLCD(nr);
-       }    
+       } 
+       
+
                     
        switch (nr)
        {
@@ -105,11 +108,12 @@ void main(void)
            case'C':
                GIE = 0;
                cmdLCD(LCD_CLEAR);
-               subtela();
-//                if( dht() )
-//                {
-//                x = sensor.temperatura;
-//                }
+               subtela();   
+                if( dht(1) )
+                {
+                x = sensor.temperatura;   
+                }
+               tempdht();
                tim =3;
                GIE = 1;
                break;

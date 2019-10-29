@@ -108,10 +108,10 @@ void SplashScreen1(void)
 
 void subtela(void)
 {
-    char show[16]="Temp. Amb.:   C";
-    show[15]=0xDF;
+    char show[16]="Temp. Amb.:    C";
+    show[14]=0xDF;
     writeLCD(0,0, show);
-    writeLCD(0,1,"Umidade   :   %");
+    writeLCD(0,1,"Umidade   :    %");
 }
 
 void Telaprincipal(void)
@@ -131,12 +131,11 @@ void tempatt (void)
 
 void tempdht (void)
 {
-    DHT sensor;
-    int te= sensor.temperatura ;
+    int te = dht(1);
     char Td[] = {"00"};
-//    Td[4] =(te/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
-//    Td[5] =(te%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
-    writeLCD(12,0,Td); 
+    Td[0] =(te/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
+    Td[1] =(te%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
+    writeLCD(12,0,Td);
 }
 
 void TempMed(void)
@@ -154,10 +153,7 @@ void TempMed(void)
 
 void showtemp (void)
 {
-    writeLCD(0,0, "Saving...");
-//    writeLCD(0,1, "Limiar Min.:   %"); 
-//    writeLCD(0,12, "salvatemp()"); 
-    
+    writeLCD(0,0, "Saving...");    
 }
 void erasertemp (void)
 {

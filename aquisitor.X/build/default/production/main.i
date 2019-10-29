@@ -2779,6 +2779,7 @@ Telaprincipal();
 tempatt();
 
 
+
 while ( 1 )
 {
 nr = tecladoLer();
@@ -2787,6 +2788,8 @@ if(nr != 0)
 {
 putLCD(nr);
 }
+
+
 
 switch (nr)
 {
@@ -2812,10 +2815,11 @@ case'C':
 GIE = 0;
 cmdLCD(0x01);
 subtela();
-
-
-
-
+if( dht(1) )
+{
+x = sensor.temperatura;
+}
+tempdht();
 tim =3;
 GIE = 1;
 break;

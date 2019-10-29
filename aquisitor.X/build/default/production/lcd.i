@@ -2751,10 +2751,10 @@ writeLCD(4,1, "de Dados");
 
 void subtela(void)
 {
-char show[16]="Temp. Amb.:   C";
-show[15]=0xDF;
+char show[16]="Temp. Amb.:    C";
+show[14]=0xDF;
 writeLCD(0,0, show);
-writeLCD(0,1,"Umidade   :   %");
+writeLCD(0,1,"Umidade   :    %");
 }
 
 void Telaprincipal(void)
@@ -2774,11 +2774,10 @@ writeLCD(12,0,Tp);
 
 void tempdht (void)
 {
-DHT sensor;
-int te= sensor.temperatura ;
+int te = dht(1);
 char Td[] = {"00"};
-
-
+Td[0] =(te/10)+0x30;
+Td[1] =(te%10)+0x30;
 writeLCD(12,0,Td);
 }
 
@@ -2798,9 +2797,6 @@ writeLCD(12,0,md);
 void showtemp (void)
 {
 writeLCD(0,0, "Saving...");
-
-
-
 }
 void erasertemp (void)
 {

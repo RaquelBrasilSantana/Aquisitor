@@ -14,5 +14,6 @@
     unsigned char EEPROM_ReadByte(unsigned char eepromAddress);
     void tmron(void);
     char looptmr(void);
+
 #endif	/* RECEPT_H_ */
 

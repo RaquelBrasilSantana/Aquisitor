@@ -32,6 +32,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "5
 [u S143 `S144 1 `S145 1 ]
 [n S143 . . . ]
+"21
+[v _dht `(uc ~T0 @X0 0 ef1`*S143 ]
 "8 recept.h
 [v _media `(uc ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
@@ -451,15 +453,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 32 `c
 -> 32 `c
 -> 32 `c
+-> 32 `c
 -> 67 `c
--> 0 `c
 ..
 ]
 "111
 [v _show `uc ~T0 @X0 -> 16 `i a ]
 [e = _show F1443 ]
 "112
-[e = *U + &U _show * -> -> -> 15 `i `ui `ux -> -> # *U &U _show `ui `ux -> -> 223 `i `uc ]
+[e = *U + &U _show * -> -> -> 14 `i `ui `ux -> -> # *U &U _show `ui `ux -> -> 223 `i `uc ]
 "113
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> &U _show `*Cuc ]
 "114
@@ -540,81 +542,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _tempdht ]
 [f ]
 "134
-[v _sensor `S143 ~T0 @X0 1 a ]
-"135
 [v _te `i ~T0 @X0 1 a ]
-[e = _te -> . . _sensor 0 1 `i ]
-[v F1455 `uc ~T0 @X0 -> 0 `x s ]
-[i F1455
+[e = _te -> ( _dht (1 -> -> 1 `i `*S143 `i ]
+[v F1454 `uc ~T0 @X0 -> 0 `x s ]
+[i F1454
 :U ..
 -> 48 `c
 -> 48 `c
 -> 0 `c
 ..
 ]
-"136
+"135
 [v _Td `uc ~T0 @X0 3  a ]
-[e = _Td F1455 ]
-"139
+[e = _Td F1454 ]
+"136
+[e = *U + &U _Td * -> -> -> 0 `i `ui `ux -> -> # *U &U _Td `ui `ux -> + / _te -> 10 `i -> 48 `i `uc ]
+"137
+[e = *U + &U _Td * -> -> -> 1 `i `ui `ux -> -> # *U &U _Td `ui `ux -> + % _te -> 10 `i -> 48 `i `uc ]
+"138
 [e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Td `*Cuc ]
-"140
+"139
 [e :UE 166 ]
 }
-"142
+"141
 [v _TempMed `(v ~T0 @X0 1 ef ]
-"143
+"142
 {
 [e :U _TempMed ]
 [f ]
-"144
+"143
 [v _Media `uc ~T0 @X0 1 a ]
-[v F1459 `uc ~T0 @X0 -> 0 `x s ]
-[i F1459
+[v F1458 `uc ~T0 @X0 -> 0 `x s ]
+[i F1458
 :U ..
 -> 48 `c
 -> 48 `c
 -> 0 `c
 ..
 ]
-"145
+"144
 [v _md `uc ~T0 @X0 3  a ]
-[e = _md F1459 ]
-"146
+[e = _md F1458 ]
+"145
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 6C ]
-"147
+"146
 [e ( _gotoxy (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
 [e ( _putLCD (1 -> -> 223 `i `uc ]
-"148
+"147
 [e = _Media ( _media ..  ]
-"149
+"148
 [e = *U + &U _md * -> -> -> 0 `i `ui `ux -> -> # *U &U _md `ui `ux -> + / -> _Media `i -> 10 `i -> 48 `i `uc ]
-"150
+"149
 [e = *U + &U _md * -> -> -> 1 `i `ui `ux -> -> # *U &U _md `ui `ux -> + % -> _Media `i -> 10 `i -> 48 `i `uc ]
-"151
+"150
 [e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _md `*Cuc ]
-"153
+"152
 [e :UE 167 ]
 }
-"155
+"154
 [v _showtemp `(v ~T0 @X0 1 ef ]
-"156
+"155
 {
 [e :U _showtemp ]
 [f ]
-"157
+"156
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 7C ]
-"161
+"157
 [e :UE 168 ]
 }
-"162
+"158
 [v _erasertemp `(v ~T0 @X0 1 ef ]
-"163
+"159
 {
 [e :U _erasertemp ]
 [f ]
-"164
+"160
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 8C ]
-"165
+"161
 [e :UE 169 ]
 }
 [a 4C 100 101 32 68 97 100 111 115 0 ]
@@ -624,4 +628,4 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 6C 84 101 109 112 46 32 77 101 100 46 58 32 32 32 32 67 0 ]
 [a 8C 65 112 97 103 97 110 100 111 46 46 46 0 ]
 [a 7C 83 97 118 105 110 103 46 46 46 0 ]
-[a 5C 85 109 105 100 97 100 101 32 32 32 58 32 32 32 37 0 ]
+[a 5C 85 109 105 100 97 100 101 32 32 32 58 32 32 32 32 37 0 ]

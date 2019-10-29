@@ -203,334 +203,334 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x BOREN=OFF ]
 "13
 [p x FCMEN=OFF ]
-"33 recept.c
+"34 recept.c
 [v _salvatemp `(v ~T0 @X0 1 ef1`uc ]
-"34
+"35
 {
 [e :U _salvatemp ]
-"33
-[v _temp `uc ~T0 @X0 1 r1 ]
 "34
-[f ]
+[v _temp `uc ~T0 @X0 1 r1 ]
 "35
-[v _valor `ui ~T0 @X0 1 a ]
+[f ]
 "36
-[e = _valor -> ( _EEPROM_read (1 _temp `ui ]
+[v _valor `ui ~T0 @X0 1 a ]
 "37
-[e ++ _valor -> -> 1 `i `ui ]
+[e = _valor -> ( _EEPROM_read (1 _temp `ui ]
 "38
-[e ( _EEPROM_write (2 , _temp _valor ]
+[e ++ _valor -> -> 1 `i `ui ]
 "39
-[e :UE 143 ]
+[e ( _EEPROM_write (2 , _temp _valor ]
+"40
+[e :UE 146 ]
 }
-"42
-[v _resetemp `(v ~T0 @X0 1 ef ]
 "43
+[v _resetemp `(v ~T0 @X0 1 ef ]
+"44
 {
 [e :U _resetemp ]
 [f ]
-"44
+"45
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 145  ]
-[e $U 146  ]
-"45
-[e :U 145 ]
-{
+[e $ < -> _i `i -> 100 `i 148  ]
+[e $U 149  ]
 "46
+[e :U 148 ]
+{
+"47
 [e ( _EEPROM_write (2 , _i -> -> 0 `i `ui ]
-"47
-}
-"44
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 145  ]
-[e :U 146 ]
-"47
-}
 "48
-[e :UE 144 ]
 }
-"51
-[v _media `(uc ~T0 @X0 1 ef ]
+"45
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 148  ]
+[e :U 149 ]
+"48
+}
+"49
+[e :UE 147 ]
+}
 "52
+[v _media `(uc ~T0 @X0 1 ef ]
+"53
 {
 [e :U _media ]
 [f ]
-"53
+"54
 [v _divisao `ul ~T0 @X0 1 a ]
 [e = _divisao -> -> -> 0 `i `l `ul ]
-"54
+"55
 [v _valor `ul ~T0 @X0 1 a ]
 [e = _valor -> -> -> 0 `i `l `ul ]
-"55
+"56
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 149  ]
-[e $U 150  ]
-"56
-[e :U 149 ]
-{
+[e $ < -> _i `i -> 100 `i 152  ]
+[e $U 153  ]
 "57
+[e :U 152 ]
+{
+"58
 [v _ee `ui ~T0 @X0 1 a ]
 [e = _ee -> -> 0 `i `ui ]
-"58
-[e = _ee -> ( _EEPROM_read (1 _i `ui ]
 "59
-[e =+ _valor -> * _ee -> _i `ui `ul ]
+[e = _ee -> ( _EEPROM_read (1 _i `ui ]
 "60
+[e =+ _valor -> * _ee -> _i `ui `ul ]
+"61
 [e =+ _divisao -> _ee `ul ]
-"61
-}
-"55
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 149  ]
-[e :U 150 ]
-"61
-}
 "62
+}
+"56
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 152  ]
+[e :U 153 ]
+"62
+}
+"63
 [v _retorno `uc ~T0 @X0 1 a ]
 [e = _retorno -> / _valor _divisao `uc ]
-"63
-[e ) _retorno ]
-[e $UE 148  ]
 "64
-[e :UE 148 ]
+[e ) _retorno ]
+[e $UE 151  ]
+"65
+[e :UE 151 ]
 }
-"67
-[v _moda `(uc ~T0 @X0 1 ef ]
 "68
+[v _moda `(uc ~T0 @X0 1 ef ]
+"69
 {
 [e :U _moda ]
 [f ]
-"69
+"70
 [v _Mvalor `ui ~T0 @X0 1 a ]
 [e = _Mvalor -> -> 0 `i `ui ]
-"70
+"71
 [v _valor `ui ~T0 @X0 1 a ]
 [e = _valor -> -> 0 `i `ui ]
-"71
+"72
 [v _temp `uc ~T0 @X0 1 a ]
 [e = _temp -> -> 0 `i `uc ]
-"72
+"73
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 153  ]
-[e $U 154  ]
-"73
-[e :U 153 ]
-{
+[e $ < -> _i `i -> 100 `i 156  ]
+[e $U 157  ]
 "74
-[e = _valor -> ( _EEPROM_read (1 _i `ui ]
-"75
-[e $ ! < _Mvalor _valor 156  ]
-"76
-{
-"77
-[e = _Mvalor _valor ]
-"78
-[e = _temp _i ]
-"79
-}
 [e :U 156 ]
+{
+"75
+[e = _valor -> ( _EEPROM_read (1 _i `ui ]
+"76
+[e $ ! < _Mvalor _valor 159  ]
+"77
+{
+"78
+[e = _Mvalor _valor ]
+"79
+[e = _temp _i ]
 "80
 }
-"72
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 153  ]
-[e :U 154 ]
-"80
-}
+[e :U 159 ]
 "81
-[e ) _temp ]
-[e $UE 152  ]
-"82
-[e :UE 152 ]
 }
-"85
-[v _mediana `(uc ~T0 @X0 1 ef ]
+"73
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 156  ]
+[e :U 157 ]
+"81
+}
+"82
+[e ) _temp ]
+[e $UE 155  ]
+"83
+[e :UE 155 ]
+}
 "86
+[v _mediana `(uc ~T0 @X0 1 ef ]
+"87
 {
 [e :U _mediana ]
 [f ]
-"87
+"88
 [v _ee `ul ~T0 @X0 1 a ]
 [e = _ee -> -> -> 0 `i `l `ul ]
-"88
+"89
 [v _ee2 `ul ~T0 @X0 1 a ]
 [e = _ee2 -> -> -> 0 `i `l `ul ]
-"89
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 100 `i 158  ]
-[e $U 159  ]
 "90
-[e :U 158 ]
-{
-"91
-[e =+ _ee -> -> ( _EEPROM_read (1 _i `l `ul ]
-"92
-}
-"89
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 100 `i 158  ]
-[e :U 159 ]
-"92
-}
-"93
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 100 `i 161  ]
 [e $U 162  ]
-"94
+"91
 [e :U 161 ]
 {
-"95
-[e =+ _ee2 -> -> ( _EEPROM_read (1 _i `l `ul ]
-"96
-[e $ ! >= _ee2 / _ee -> -> -> 2 `i `l `ul 164  ]
-"97
-{
-"98
-[e ) _i ]
-[e $UE 157  ]
-"99
-[e $U 162  ]
-"100
-}
-[e :U 164 ]
-"101
-}
+"92
+[e =+ _ee -> -> ( _EEPROM_read (1 _i `l `ul ]
 "93
+}
+"90
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 100 `i 161  ]
 [e :U 162 ]
+"93
+}
+"94
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 100 `i 164  ]
+[e $U 165  ]
+"95
+[e :U 164 ]
+{
+"96
+[e =+ _ee2 -> -> ( _EEPROM_read (1 _i `l `ul ]
+"97
+[e $ ! >= _ee2 / _ee -> -> -> 2 `i `l `ul 167  ]
+"98
+{
+"99
+[e ) _i ]
+[e $UE 160  ]
+"100
+[e $U 165  ]
 "101
 }
+[e :U 167 ]
 "102
-[e ) -> -U -> 1 `i `uc ]
-[e $UE 157  ]
-"103
-[e :UE 157 ]
 }
-"105
-[v _EEPROM_write `(v ~T0 @X0 1 ef2`uc`ui ]
+"94
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 164  ]
+[e :U 165 ]
+"102
+}
+"103
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 160  ]
+"104
+[e :UE 160 ]
+}
 "106
+[v _EEPROM_write `(v ~T0 @X0 1 ef2`uc`ui ]
+"107
 {
 [e :U _EEPROM_write ]
-"105
+"106
 [v _pont `uc ~T0 @X0 1 r1 ]
 [v _value `ui ~T0 @X0 1 r2 ]
-"106
-[f ]
 "107
-[e ( _EEPROM_WriteByte (2 , _pont -> / _value -> -> 256 `i `ui `uc ]
+[f ]
 "108
-[e ( _EEPROM_WriteByte (2 , -> + -> _pont `i -> 100 `i `uc -> % _value -> -> 256 `i `ui `uc ]
+[e ( _EEPROM_WriteByte (2 , _pont -> / _value -> -> 256 `i `ui `uc ]
 "109
-[e :UE 165 ]
-}
+[e ( _EEPROM_WriteByte (2 , -> + -> _pont `i -> 100 `i `uc -> % _value -> -> 256 `i `ui `uc ]
 "110
-[v _EEPROM_read `(i ~T0 @X0 1 ef1`uc ]
+[e :UE 168 ]
+}
 "111
+[v _EEPROM_read `(i ~T0 @X0 1 ef1`uc ]
+"112
 {
 [e :U _EEPROM_read ]
-"110
-[v _pont `uc ~T0 @X0 1 r1 ]
 "111
-[f ]
+[v _pont `uc ~T0 @X0 1 r1 ]
 "112
-[e ) + * -> ( _EEPROM_ReadByte (1 _pont `i -> 256 `i -> ( _EEPROM_ReadByte (1 -> + -> _pont `i -> 100 `i `uc `i ]
-[e $UE 166  ]
+[f ]
 "113
-[e :UE 166 ]
+[e ) + * -> ( _EEPROM_ReadByte (1 _pont `i -> 256 `i -> ( _EEPROM_ReadByte (1 -> + -> _pont `i -> 100 `i `uc `i ]
+[e $UE 169  ]
+"114
+[e :UE 169 ]
 }
-"115
-[v _EEPROM_WriteByte `(v ~T0 @X0 1 ef2`uc`uc ]
 "116
+[v _EEPROM_WriteByte `(v ~T0 @X0 1 ef2`uc`uc ]
+"117
 {
 [e :U _EEPROM_WriteByte ]
-"115
+"116
 [v _eepromAddress `uc ~T0 @X0 1 r1 ]
 [v _eepromData `uc ~T0 @X0 1 r2 ]
-"116
-[f ]
 "117
-[v _gie_Status `uc ~T0 @X0 1 a ]
+[f ]
 "118
-[e $U 168  ]
-[e :U 169 ]
-[e :U 168 ]
-[e $ _WR 169  ]
-[e :U 170 ]
+[v _gie_Status `uc ~T0 @X0 1 a ]
 "119
-[e = _EEADR _eepromAddress ]
+[e $U 171  ]
+[e :U 172 ]
+[e :U 171 ]
+[e $ _WR 172  ]
+[e :U 173 ]
 "120
+[e = _EEADR _eepromAddress ]
+"121
 [e = _EEDATA _eepromData ]
-"122
-[e = _WREN -> -> 1 `i `b ]
 "123
-[e = _gie_Status -> -> _GIE `i `uc ]
+[e = _WREN -> -> 1 `i `b ]
 "124
-[e = _GIE -> -> 0 `i `b ]
+[e = _gie_Status -> -> _GIE `i `uc ]
 "125
-[e = _EECON2 -> -> 85 `i `uc ]
+[e = _GIE -> -> 0 `i `b ]
 "126
-[e = _EECON2 -> -> 170 `i `uc ]
+[e = _EECON2 -> -> 85 `i `uc ]
 "127
-[e = _WR -> -> 1 `i `b ]
+[e = _EECON2 -> -> 170 `i `uc ]
 "128
-[e = _GIE -> _gie_Status `b ]
+[e = _WR -> -> 1 `i `b ]
 "129
-[e = _WREN -> -> 0 `i `b ]
+[e = _GIE -> _gie_Status `b ]
 "130
-[e :UE 167 ]
-}
+[e = _WREN -> -> 0 `i `b ]
 "131
-[v _EEPROM_ReadByte `(uc ~T0 @X0 1 ef1`uc ]
+[e :UE 170 ]
+}
 "132
+[v _EEPROM_ReadByte `(uc ~T0 @X0 1 ef1`uc ]
+"133
 {
 [e :U _EEPROM_ReadByte ]
-"131
-[v _eepromAddress `uc ~T0 @X0 1 r1 ]
 "132
-[f ]
+[v _eepromAddress `uc ~T0 @X0 1 r1 ]
 "133
-[e $U 172  ]
-[e :U 173 ]
-[e :U 172 ]
-[e $ || _RD _WR 173  ]
-[e :U 174 ]
+[f ]
 "134
+[e $U 175  ]
+[e :U 176 ]
+[e :U 175 ]
+[e $ || _RD _WR 176  ]
+[e :U 177 ]
+"135
 [e = _EEADR _eepromAddress ]
-"136
-[e = _RD -> -> 1 `i `b ]
 "137
-[e ) _EEDATA ]
-[e $UE 171  ]
+[e = _RD -> -> 1 `i `b ]
 "138
-[e :UE 171 ]
-}
+[e ) _EEDATA ]
+[e $UE 174  ]
 "139
-[v _tmron `(v ~T0 @X0 1 ef ]
+[e :UE 174 ]
+}
 "140
+[v _tmron `(v ~T0 @X0 1 ef ]
+"141
 {
 [e :U _tmron ]
 [f ]
-"141
-[e = _TMR1IE -> -> 1 `i `b ]
 "142
-[e = _GIE -> -> 1 `i `b ]
+[e = _TMR1IE -> -> 1 `i `b ]
 "143
-[e = _PEIE -> -> 1 `i `b ]
+[e = _GIE -> -> 1 `i `b ]
 "144
-[e = _TMR1L = _TMR1H -> -> 0 `i `uc ]
+[e = _PEIE -> -> 1 `i `b ]
 "145
-[e = _T1CON -> -> 49 `i `uc ]
+[e = _TMR1L = _TMR1H -> -> 0 `i `uc ]
 "146
-[e :UE 175 ]
+[e = _T1CON -> -> 49 `i `uc ]
+"147
+[e :UE 178 ]
 }

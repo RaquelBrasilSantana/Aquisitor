@@ -2631,7 +2631,27 @@ unsigned char temperaturaLer(void);
 # 11 "delay.h"
 void delay(unsigned int t);
 
-# 33 "recept.c"
+# 4 "dht_11.h"
+typedef union
+{
+struct
+{
+unsigned char ;
+unsigned char temperatura;
+unsigned char ;
+unsigned char umidade;
+};
+struct
+{
+unsigned long umidade_temperatura;
+};
+} DHT;
+
+
+void initDHT11( void );
+unsigned char dht( DHT * ptr );
+
+# 34 "recept.c"
 void salvatemp(unsigned char temp)
 {
 unsigned int valor;
