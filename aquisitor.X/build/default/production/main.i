@@ -2815,9 +2815,14 @@ case'C':
 GIE = 0;
 cmdLCD(0x01);
 subtela();
-if( dht(1) )
+if( dht(&sensor) )
 {
-x = sensor.temperatura;
+sensor.temperatura;
+sensor.umidade;
+char Td[] = {"00"};
+
+
+writeLCD(12,0,Td);
 }
 tempdht();
 tim =3;

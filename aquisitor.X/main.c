@@ -109,9 +109,14 @@ void main(void)
                GIE = 0;
                cmdLCD(LCD_CLEAR);
                subtela();   
-                if( dht(1) )
+                if( dht(&sensor) )
                 {
-                x = sensor.temperatura;   
+                sensor.temperatura; 
+                sensor.umidade;
+                char Td[] = {"00"};
+//                Td[0] =(sensor/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
+////              Td[1] =(sensor%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
+                writeLCD(12,0,Td);
                 }
                tempdht();
                tim =3;

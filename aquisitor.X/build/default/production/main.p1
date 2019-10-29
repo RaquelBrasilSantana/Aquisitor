@@ -97,7 +97,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _subtela `(v ~T0 @X0 0 ef ]
 "21 dht_11.h
 [v _dht `(uc ~T0 @X0 0 ef1`*S175 ]
-"82 lcd.h
+"70 lcd.h
+[v _writeLCD `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
+"82
 [v _tempdht `(v ~T0 @X0 0 ef ]
 "79
 [v _showtemp `(v ~T0 @X0 0 ef ]
@@ -656,59 +658,74 @@ Version 3.2 HI-TECH Software Intermediate Code
 "111
 [e ( _subtela ..  ]
 "112
-[e $ ! != -> ( _dht (1 -> -> 1 `i `*S175 `i -> -> -> 0 `i `uc `i 193  ]
+[e $ ! != -> ( _dht (1 &U _sensor `i -> -> -> 0 `i `uc `i 193  ]
 "113
 {
 "114
-[e = _x -> . . _sensor 0 1 `i ]
+[e . . _sensor 0 1 ]
 "115
+[e . . _sensor 0 3 ]
+[v F1443 `uc ~T0 @X0 -> 0 `x s ]
+[i F1443
+:U ..
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"116
+[v _Td `uc ~T0 @X0 3  a ]
+[e = _Td F1443 ]
+"119
+[e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Td `*Cuc ]
+"120
 }
 [e :U 193 ]
-"116
-[e ( _tempdht ..  ]
-"117
-[e = _tim -> -> 3 `i `uc ]
-"118
-[e = _GIE -> -> 1 `i `b ]
-"119
-[e $U 188  ]
 "121
-[e :U 194 ]
+[e ( _tempdht ..  ]
 "122
-[e = _GIE -> -> 0 `i `b ]
+[e = _tim -> -> 3 `i `uc ]
 "123
-[e = _tim -> -> 2 `i `uc ]
+[e = _GIE -> -> 1 `i `b ]
 "124
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"125
-[e ( _showtemp ..  ]
+[e $U 188  ]
 "126
-[e ( _salvatemp (1 ( _temperaturaLer ..  ]
+[e :U 194 ]
 "127
-[e = _Controle_do_retorno _repeat ]
-"128
-[e = _GIE -> -> 1 `i `b ]
-"129
-[e $U 188  ]
-"131
-[e :U 195 ]
-"132
 [e = _GIE -> -> 0 `i `b ]
-"133
+"128
 [e = _tim -> -> 2 `i `uc ]
-"134
+"129
 [e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"135
-[e ( _erasertemp ..  ]
-"136
-[e ( _resetemp ..  ]
-"137
+"130
+[e ( _showtemp ..  ]
+"131
+[e ( _salvatemp (1 ( _temperaturaLer ..  ]
+"132
 [e = _Controle_do_retorno _repeat ]
-"138
+"133
 [e = _GIE -> -> 1 `i `b ]
-"139
+"134
 [e $U 188  ]
+"136
+[e :U 195 ]
+"137
+[e = _GIE -> -> 0 `i `b ]
+"138
+[e = _tim -> -> 2 `i `uc ]
+"139
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"140
+[e ( _erasertemp ..  ]
 "141
+[e ( _resetemp ..  ]
+"142
+[e = _Controle_do_retorno _repeat ]
+"143
+[e = _GIE -> -> 1 `i `b ]
+"144
+[e $U 188  ]
+"146
 }
 [e $U 188  ]
 "88
@@ -719,14 +736,14 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 42 `ui `uc 194
  , $ -> -> 35 `ui `uc 195
  188 ]
-"141
+"146
 [e :U 188 ]
-"145
+"150
 }
 [e :U 184 ]
 "77
 [e $U 185  ]
 [e :U 186 ]
-"146
+"151
 [e :UE 183 ]
 }

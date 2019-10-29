@@ -23,17 +23,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "12 leitorLM35_v07.h
 [v _temperaturaLer `(uc ~T0 @X0 0 ef ]
-"7 dht_11.h
-[s S144 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S144 . . temperatura . umidade ]
-"14
-[s S145 `ul 1 ]
-[n S145 . umidade_temperatura ]
-"5
-[u S143 `S144 1 `S145 1 ]
-[n S143 . . . ]
-"21
-[v _dht `(uc ~T0 @X0 0 ef1`*S143 ]
 "8 recept.h
 [v _media `(uc ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
@@ -541,26 +530,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U _tempdht ]
 [f ]
-"134
-[v _te `i ~T0 @X0 1 a ]
-[e = _te -> ( _dht (1 -> -> 1 `i `*S143 `i ]
-[v F1454 `uc ~T0 @X0 -> 0 `x s ]
-[i F1454
-:U ..
--> 48 `c
--> 48 `c
--> 0 `c
-..
-]
-"135
-[v _Td `uc ~T0 @X0 3  a ]
-[e = _Td F1454 ]
-"136
-[e = *U + &U _Td * -> -> -> 0 `i `ui `ux -> -> # *U &U _Td `ui `ux -> + / _te -> 10 `i -> 48 `i `uc ]
-"137
-[e = *U + &U _Td * -> -> -> 1 `i `ui `ux -> -> # *U &U _Td `ui `ux -> + % _te -> 10 `i -> 48 `i `uc ]
-"138
-[e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Td `*Cuc ]
 "139
 [e :UE 166 ]
 }
@@ -572,8 +541,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "143
 [v _Media `uc ~T0 @X0 1 a ]
-[v F1458 `uc ~T0 @X0 -> 0 `x s ]
-[i F1458
+[v F1455 `uc ~T0 @X0 -> 0 `x s ]
+[i F1455
 :U ..
 -> 48 `c
 -> 48 `c
@@ -582,7 +551,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 "144
 [v _md `uc ~T0 @X0 3  a ]
-[e = _md F1458 ]
+[e = _md F1455 ]
 "145
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 6C ]
 "146

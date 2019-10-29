@@ -111,7 +111,7 @@
 [v _tecladoLer tecladoLer `(uc  1 e 1 0 ]
 "228 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S256 . 1 `uc 1 RB0 1 0 :1:0 
+[s S237 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -121,11 +121,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S265 . 1 `S256 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES265  1 e 1 @6 ]
+[u S246 . 1 `S237 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES246  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S531 . 1 `uc 1 RC0 1 0 :1:0 
+[s S519 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -135,15 +135,15 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "307
-[u S540 . 1 `S531 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES540  1 e 1 @7 ]
+[u S528 . 1 `S519 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES528  1 e 1 @7 ]
 "657
 [v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "664
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
 "671
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
-[s S292 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S273 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -152,7 +152,7 @@
 `uc 1 T1GINV 1 0 :1:7 
 ]
 "700
-[s S300 . 1 `uc 1 . 1 0 :2:0 
+[s S281 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1INSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
@@ -160,36 +160,36 @@
 `uc 1 . 1 0 :1:6 
 `uc 1 T1GIV 1 0 :1:7 
 ]
-[s S308 . 1 `uc 1 . 1 0 :2:0 
+[s S289 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 ]
-[u S311 . 1 `S292 1 . 1 0 `S300 1 . 1 0 `S308 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES311  1 e 1 @16 ]
-[s S505 . 1 `uc 1 SSPM 1 0 :4:0 
+[u S292 . 1 `S273 1 . 1 0 `S281 1 . 1 0 `S289 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES292  1 e 1 @16 ]
+[s S493 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "870
-[s S511 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S499 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S516 . 1 `S505 1 . 1 0 `S511 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES516  1 e 1 @20 ]
+[u S504 . 1 `S493 1 . 1 0 `S499 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES504  1 e 1 @20 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1245
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S158 . 1 `uc 1 ADON 1 0 :1:0 
+[s S139 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S163 . 1 `uc 1 . 1 0 :1:0 
+[s S144 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -198,15 +198,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S172 . 1 `uc 1 . 1 0 :1:0 
+[s S153 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S175 . 1 `uc 1 . 1 0 :1:0 
+[s S156 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S178 . 1 `S158 1 . 1 0 `S163 1 . 1 0 `S172 1 . 1 0 `S175 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES178  1 e 1 @31 ]
-[s S226 . 1 `uc 1 PS 1 0 :3:0 
+[u S159 . 1 `S139 1 . 1 0 `S144 1 . 1 0 `S153 1 . 1 0 `S156 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES159  1 e 1 @31 ]
+[s S207 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -214,19 +214,19 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S233 . 1 `uc 1 PS0 1 0 :1:0 
+[s S214 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S237 . 1 `S226 1 . 1 0 `S233 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES237  1 e 1 @129 ]
+[u S218 . 1 `S207 1 . 1 0 `S214 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES218  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S552 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S540 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -236,8 +236,8 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S561 . 1 `S552 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES561  1 e 1 @135 ]
+[u S549 . 1 `S540 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES549  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "2970
@@ -289,13 +289,11 @@
 [v _repeat repeat `i  1 e 2 0 ]
 "17
 [v _Controle_do_retorno Controle_do_retorno `i  1 e 2 0 ]
-"18
-[v _x x `i  1 e 2 0 ]
-[s S57 . 4 `uc 1 . 1 0 `uc 1 temperatura 1 1 `uc 1 . 1 2 `uc 1 umidade 1 3 ]
+[s S262 . 4 `uc 1 . 1 0 `uc 1 temperatura 1 1 `uc 1 . 1 2 `uc 1 umidade 1 3 ]
 "20
-[s S62 . 4 `ul 1 umidade_temperatura 4 0 ]
-[u S64 . 4 `S57 1 . 4 0 `S62 1 . 4 0 ]
-[v _sensor sensor `S64  1 e 4 0 ]
+[s S267 . 4 `ul 1 umidade_temperatura 4 0 ]
+[u S269 . 4 `S262 1 . 4 0 `S267 1 . 4 0 ]
+[v _sensor sensor `S269  1 e 4 0 ]
 "20 Z:\Aquisitor\aquisitor.X\teclado.h
 [v _tecAnterior tecAnterior `uc  1 e 1 0 ]
 "21
@@ -305,7 +303,11 @@
 "51 Z:\Aquisitor\aquisitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"146
+"116
+[v main@Td Td `[3]uc  1 a 3 63 ]
+"115
+[v main@F1443 F1443 `[3]uc  1 s 3 F1443 ]
+"151
 } 0
 "140 Z:\Aquisitor\aquisitor.X\recept.c
 [v _tmron tmron `(v  1 e 1 0 ]
@@ -320,28 +322,9 @@
 "132 Z:\Aquisitor\aquisitor.X\lcd.c
 [v _tempdht tempdht `(v  1 e 1 0 ]
 {
-"135
-[v tempdht@Td Td `[3]uc  1 a 3 18 ]
-"134
-[v tempdht@te te `i  1 a 2 21 ]
-[v tempdht@F1454 F1454 `[3]uc  1 s 3 F1454 ]
 "139
 } 0
-"40 Z:\Aquisitor\aquisitor.X\dht_11.c
-[v _dht dht `(uc  1 e 1 0 ]
-{
-"42
-[v dht@i i `uc  1 a 1 10 ]
-"43
-[v dht@crc crc `uc  1 a 1 9 ]
-[s S57 . 4 `uc 1 . 1 0 `uc 1 temperatura 1 1 `uc 1 . 1 2 `uc 1 umidade 1 3 ]
-"40
-[s S62 . 4 `ul 1 umidade_temperatura 4 0 ]
-[u S64 . 4 `S57 1 . 4 0 `S62 1 . 4 0 ]
-[v dht@ptr ptr `*.39S64  1 p 2 0 ]
-"80
-} 0
-"123 Z:\Aquisitor\aquisitor.X\lcd.c
+"123
 [v _tempatt tempatt `(v  1 e 1 0 ]
 {
 "126
@@ -395,17 +378,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S910 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S898 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S915 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S918 . 4 `l 1 i 4 0 `d 1 f 4 0 `S910 1 fAsBytes 4 0 `S915 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S918  1 a 4 34 ]
+[s S903 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S906 . 4 `l 1 i 4 0 `d 1 f 4 0 `S898 1 fAsBytes 4 0 `S903 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S906  1 a 4 34 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S987 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S975 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S990 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S987 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S990  1 a 2 38 ]
+[u S978 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S975 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S978  1 a 2 38 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 33 ]
 "11
@@ -511,14 +494,32 @@
 {
 "161
 } 0
-"141
+"40 Z:\Aquisitor\aquisitor.X\dht_11.c
+[v _dht dht `(uc  1 e 1 0 ]
+{
+[s S262 . 4 `uc 1 . 1 0 `uc 1 temperatura 1 1 `uc 1 . 1 2 `uc 1 umidade 1 3 ]
+[s S267 . 4 `ul 1 umidade_temperatura 4 0 ]
+[u S269 . 4 `S262 1 . 4 0 `S267 1 . 4 0 ]
+[v dht@ptr ptr `*.4S269  1 a 1 wreg ]
+"42
+[v dht@i i `uc  1 a 1 5 ]
+"43
+[v dht@crc crc `uc  1 a 1 3 ]
+"40
+[v dht@ptr ptr `*.4S269  1 a 1 wreg ]
+"43
+"40
+[v dht@ptr ptr `*.4S269  1 a 1 4 ]
+"80
+} 0
+"141 Z:\Aquisitor\aquisitor.X\lcd.c
 [v _TempMed TempMed `(v  1 e 1 0 ]
 {
 "144
 [v TempMed@md md `[3]uc  1 a 3 35 ]
 "143
 [v TempMed@Media Media `uc  1 a 1 38 ]
-[v TempMed@F1458 F1458 `[3]uc  1 s 3 F1458 ]
+[v TempMed@F1455 F1455 `[3]uc  1 s 3 F1455 ]
 "152
 } 0
 "52 Z:\Aquisitor\aquisitor.X\recept.c
@@ -725,14 +726,14 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
 [v i1___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S910 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S915 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S918 . 4 `l 1 i 4 0 `d 1 f 4 0 `S910 1 fAsBytes 4 0 `S915 1 fAsWords 4 0 ]
-[v i1___flmul@prod __flmul `S918  1 a 4 20 ]
+[s S898 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S903 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S906 . 4 `l 1 i 4 0 `d 1 f 4 0 `S898 1 fAsBytes 4 0 `S903 1 fAsWords 4 0 ]
+[v i1___flmul@prod __flmul `S906  1 a 4 20 ]
 [v i1___flmul@grs __flmul `ul  1 a 4 14 ]
-[s S987 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S990 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S987 1 nAsBytes 2 0 ]
-[v i1___flmul@temp __flmul `S990  1 a 2 24 ]
+[s S975 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S978 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S975 1 nAsBytes 2 0 ]
+[v i1___flmul@temp __flmul `S978  1 a 2 24 ]
 [v i1___flmul@bexp __flmul `uc  1 a 1 19 ]
 [v i1___flmul@aexp __flmul `uc  1 a 1 18 ]
 [v i1___flmul@sign __flmul `uc  1 a 1 13 ]

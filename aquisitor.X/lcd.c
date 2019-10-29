@@ -131,11 +131,11 @@ void tempatt (void)
 
 void tempdht (void)
 {
-    int te = dht(1);
-    char Td[] = {"00"};
-    Td[0] =(te/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
-    Td[1] =(te%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
-    writeLCD(12,0,Td);
+//    int te = sensor;
+//    char Td[] = {"00"};
+//    Td[0] =(te/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
+//    Td[1] =(te%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
+//    writeLCD(12,0,Td);
 }
 
 void TempMed(void)

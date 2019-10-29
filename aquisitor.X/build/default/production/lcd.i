@@ -2774,11 +2774,8 @@ writeLCD(12,0,Tp);
 
 void tempdht (void)
 {
-int te = dht(1);
-char Td[] = {"00"};
-Td[0] =(te/10)+0x30;
-Td[1] =(te%10)+0x30;
-writeLCD(12,0,Td);
+
+# 139
 }
 
 void TempMed(void)
