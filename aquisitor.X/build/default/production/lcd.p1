@@ -5,7 +5,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "16
 [u S140 `S141 1 ]
 [n S140 . . ]
-"1602 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
+"1602 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "11 delay.h
 [v _delay `(v ~T0 @X0 0 ef1`ui ]
@@ -18,14 +18,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [u S138 `S139 1 `uc 1 ]
 [n S138 . . HILO ]
 [v F1258 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+"92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
 [v __delay `JF1258 ~T0 @X0 0 e ]
 [p i __delay ]
 "12 leitorLM35_v07.h
 [v _temperaturaLer `(uc ~T0 @X0 0 ef ]
+"7 dht_11.h
+[s S144 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S144 . . temperatura . umidade ]
+"14
+[s S145 `ul 1 ]
+[n S145 . umidade_temperatura ]
+"5
+[u S143 `S144 1 `S145 1 ]
+[n S143 . . . ]
 "8 recept.h
 [v _media `(uc ~T0 @X0 0 ef ]
-"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [; <" INDF equ 00h ;# ">
 "61
 [; <" TMR0 equ 01h ;# ">
@@ -197,249 +206,275 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x BOREN=OFF ]
 "13
 [p x FCMEN=OFF ]
-"11 lcd.c
+"12 lcd.c
 [v _LCD `VS140 ~T0 @X0 1 e@8 ]
-"13
-[v _initLCD `(v ~T0 @X0 1 ef ]
 "14
+[v _initLCD `(v ~T0 @X0 1 ef ]
+"15
 {
 [e :U _initLCD ]
 [f ]
-"15
-[e = . . _LCD 0 3 -> -> 0 `i `uc ]
 "16
-[e = . . _LCD 0 4 -> -> 0 `i `uc ]
+[e = . . _LCD 0 3 -> -> 0 `i `uc ]
 "17
-[e = . . _LCD 0 1 -> -> 0 `i `uc ]
+[e = . . _LCD 0 4 -> -> 0 `i `uc ]
 "18
-[e = . . _LCD 0 0 -> -> 3 `i `uc ]
+[e = . . _LCD 0 1 -> -> 0 `i `uc ]
 "19
-[e = . . _LCD 0 2 -> -> 1 `i `uc ]
+[e = . . _LCD 0 0 -> -> 3 `i `uc ]
 "20
+[e = . . _LCD 0 2 -> -> 1 `i `uc ]
+"21
 [e = _TRISD -> -> 192 `i `uc ]
-"22
+"23
 [e ( _delay (1 -> -> 10 `i `ui ]
-"24
-[e ( _cmdLCD (1 -> -> 32 `i `uc ]
 "25
-[e ( _cmdLCD (1 -> -> 40 `i `uc ]
+[e ( _cmdLCD (1 -> -> 32 `i `uc ]
 "26
-[e ( _cmdLCD (1 -> -> 12 `i `uc ]
+[e ( _cmdLCD (1 -> -> 40 `i `uc ]
 "27
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+[e ( _cmdLCD (1 -> -> 12 `i `uc ]
 "28
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"29
 [e ( _cmdLCD (1 -> -> 2 `i `uc ]
-"30
-[e ( _delay (1 -> -> 10 `i `ui ]
 "31
-[e :UE 143 ]
+[e ( _delay (1 -> -> 10 `i `ui ]
+"32
+[e :UE 146 ]
 }
-"33
-[v _cmdLCD `(v ~T0 @X0 1 ef1`uc ]
 "34
+[v _cmdLCD `(v ~T0 @X0 1 ef1`uc ]
+"35
 {
 [e :U _cmdLCD ]
-"33
-[v _cmd `uc ~T0 @X0 1 r1 ]
 "34
-[f ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
 "35
+[f ]
+"36
 [v _nibble `VS138 ~T0 @X0 1 a ]
-"37
-[e = . _nibble 1 _cmd ]
 "38
-[e = . . _LCD 0 1 -> -> 0 `i `uc ]
+[e = . _nibble 1 _cmd ]
 "39
-[e = . . _LCD 0 0 . . _nibble 0 1 ]
-"40
-[e = . . _LCD 0 2 -> -> 0 `i `uc ]
-"41
-[e $ ! || == -> _cmd `i -> 1 `i == -> _cmd `i -> 2 `i 145  ]
-"42
-[e ( _delay (1 -> -> 2 `i `ui ]
-[e $U 146  ]
-"43
-[e :U 145 ]
-"44
-[e ( _delay (1 -> -> 2 `i `ui ]
-[e :U 146 ]
-"45
-[e = . . _LCD 0 2 -> -> 1 `i `uc ]
-"47
-[e $ ! != -> _cmd `i -> 32 `i 147  ]
-"48
-{
-"49
 [e = . . _LCD 0 1 -> -> 0 `i `uc ]
-"50
-[e = . . _LCD 0 0 . . _nibble 0 0 ]
-"51
+"40
+[e = . . _LCD 0 0 . . _nibble 0 1 ]
+"41
 [e = . . _LCD 0 2 -> -> 0 `i `uc ]
-"52
+"42
 [e $ ! || == -> _cmd `i -> 1 `i == -> _cmd `i -> 2 `i 148  ]
-"53
+"43
 [e ( _delay (1 -> -> 2 `i `ui ]
 [e $U 149  ]
-"54
+"44
 [e :U 148 ]
-"55
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"45
+[e ( _delay (1 -> -> 2 `i `ui ]
 [e :U 149 ]
-"56
+"46
 [e = . . _LCD 0 2 -> -> 1 `i `uc ]
+"48
+[e $ ! != -> _cmd `i -> 32 `i 150  ]
+"49
+{
+"50
+[e = . . _LCD 0 1 -> -> 0 `i `uc ]
+"51
+[e = . . _LCD 0 0 . . _nibble 0 0 ]
+"52
+[e = . . _LCD 0 2 -> -> 0 `i `uc ]
+"53
+[e $ ! || == -> _cmd `i -> 1 `i == -> _cmd `i -> 2 `i 151  ]
+"54
+[e ( _delay (1 -> -> 2 `i `ui ]
+[e $U 152  ]
+"55
+[e :U 151 ]
+"56
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[e :U 152 ]
 "57
-}
-[e :U 147 ]
+[e = . . _LCD 0 2 -> -> 1 `i `uc ]
 "58
-[e :UE 144 ]
 }
-"60
-[v _putLCD `(v ~T0 @X0 1 ef1`uc ]
+[e :U 150 ]
+"59
+[e :UE 147 ]
+}
 "61
+[v _putLCD `(v ~T0 @X0 1 ef1`uc ]
+"62
 {
 [e :U _putLCD ]
-"60
-[v _c `uc ~T0 @X0 1 r1 ]
 "61
-[f ]
+[v _c `uc ~T0 @X0 1 r1 ]
 "62
+[f ]
+"63
 [v _nibble `VS138 ~T0 @X0 1 a ]
-"64
-[e = . _nibble 1 _c ]
 "65
-[e = . . _LCD 0 1 -> -> 1 `i `uc ]
+[e = . _nibble 1 _c ]
 "66
-[e = . . _LCD 0 0 . . _nibble 0 1 ]
-"67
-[e = . . _LCD 0 2 -> -> 0 `i `uc ]
-"68
-[e ( _delay (1 -> -> 2 `i `ui ]
-"69
-[e = . . _LCD 0 2 -> -> 1 `i `uc ]
-"71
 [e = . . _LCD 0 1 -> -> 1 `i `uc ]
-"72
-[e = . . _LCD 0 0 . . _nibble 0 0 ]
-"73
+"67
+[e = . . _LCD 0 0 . . _nibble 0 1 ]
+"68
 [e = . . _LCD 0 2 -> -> 0 `i `uc ]
-"74
+"69
 [e ( _delay (1 -> -> 2 `i `ui ]
-"75
+"70
 [e = . . _LCD 0 2 -> -> 1 `i `uc ]
+"72
+[e = . . _LCD 0 1 -> -> 1 `i `uc ]
+"73
+[e = . . _LCD 0 0 . . _nibble 0 0 ]
+"74
+[e = . . _LCD 0 2 -> -> 0 `i `uc ]
+"75
+[e ( _delay (1 -> -> 2 `i `ui ]
 "76
-[e :UE 150 ]
-}
+[e = . . _LCD 0 2 -> -> 1 `i `uc ]
 "77
-[v _gotoxy `(v ~T0 @X0 1 ef2`uc`uc ]
+[e :UE 153 ]
+}
 "78
+[v _gotoxy `(v ~T0 @X0 1 ef2`uc`uc ]
+"79
 {
 [e :U _gotoxy ]
-"77
+"78
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"78
-[f ]
 "79
-[e ( _cmdLCD (1 -> + | -> 128 `i * -> 192 `i -> _y `i & -> _x `i -> 63 `i `uc ]
+[f ]
 "80
-[e :UE 151 ]
-}
+[e ( _cmdLCD (1 -> + | -> 128 `i * -> 192 `i -> _y `i & -> _x `i -> 63 `i `uc ]
 "81
-[v _writeLCD `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
+[e :UE 154 ]
+}
 "82
+[v _writeLCD `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
+"83
 {
 [e :U _writeLCD ]
-"81
+"82
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
 [v _ptr `*Cuc ~T0 @X0 1 r3 ]
-"82
-[f ]
 "83
+[f ]
+"84
 [e ( _gotoxy (2 , _x _y ]
-"84
-[e $U 153  ]
-[e :U 154 ]
 "85
-[e ( _putLCD (1 *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[e :U 153 ]
-"84
-[e $ != -> *U _ptr `i -> -> -> 0 `i `Cuc `i 154  ]
-[e :U 155 ]
+[e $U 156  ]
+[e :U 157 ]
 "86
-[e :UE 152 ]
+[e ( _putLCD (1 *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
+[e :U 156 ]
+"85
+[e $ != -> *U _ptr `i -> -> -> 0 `i `Cuc `i 157  ]
+[e :U 158 ]
+"87
+[e :UE 155 ]
 }
-"88
-[v _lcdb0 `(uc ~T0 @X0 1 ef ]
 "89
+[v _lcdb0 `(uc ~T0 @X0 1 ef ]
+"90
 {
 [e :U _lcdb0 ]
 [f ]
-"90
-[e ) . . _LCD 0 3 ]
-[e $UE 156  ]
 "91
-[e :UE 156 ]
-}
+[e ) . . _LCD 0 3 ]
+[e $UE 159  ]
 "92
-[v _lcdb1 `(uc ~T0 @X0 1 ef ]
+[e :UE 159 ]
+}
 "93
+[v _lcdb1 `(uc ~T0 @X0 1 ef ]
+"94
 {
 [e :U _lcdb1 ]
 [f ]
-"94
-[e ) . . _LCD 0 4 ]
-[e $UE 157  ]
 "95
-[e :UE 157 ]
+[e ) . . _LCD 0 4 ]
+[e $UE 160  ]
+"96
+[e :UE 160 ]
 }
-"97
-[v _SplashScreen0 `(v ~T0 @X0 1 ef ]
 "98
+[v _SplashScreen0 `(v ~T0 @X0 1 ef ]
+"99
 {
 [e :U _SplashScreen0 ]
 [f ]
-"99
-[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 0 `i `uc :s 1C ]
 "100
-[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 1 `i `uc :s 2C ]
+[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 0 `i `uc :s 1C ]
 "101
-[e :UE 158 ]
-}
+[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 1 `i `uc :s 2C ]
 "102
-[v _SplashScreen1 `(v ~T0 @X0 1 ef ]
+[e :UE 161 ]
+}
 "103
+[v _SplashScreen1 `(v ~T0 @X0 1 ef ]
+"104
 {
 [e :U _SplashScreen1 ]
 [f ]
-"104
-[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 0 `i `uc :s 3C ]
 "105
-[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 1 `i `uc :s 4C ]
+[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 0 `i `uc :s 3C ]
 "106
-[e :UE 159 ]
+[e ( _writeLCD (3 , , -> -> 4 `i `uc -> -> 1 `i `uc :s 4C ]
+"107
+[e :UE 162 ]
 }
-"108
-[v _Menu `(v ~T0 @X0 1 ef ]
 "109
-{
-[e :U _Menu ]
-[f ]
+[v _subtela `(v ~T0 @X0 1 ef ]
 "110
-[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 5C ]
+{
+[e :U _subtela ]
+[f ]
+[v F1443 `uc ~T0 @X0 -> 16 `i s ]
+[i F1443
+:U ..
+-> 84 `c
+-> 101 `c
+-> 109 `c
+-> 112 `c
+-> 46 `c
+-> 32 `c
+-> 65 `c
+-> 109 `c
+-> 98 `c
+-> 46 `c
+-> 58 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 67 `c
+-> 0 `c
+..
+]
 "111
-[e ( _writeLCD (3 , , -> -> 3 `i `uc -> -> 1 `i `uc :s 6C ]
+[v _show `uc ~T0 @X0 -> 16 `i a ]
+[e = _show F1443 ]
+"112
+[e = *U + &U _show * -> -> -> 15 `i `ui `ux -> -> # *U &U _show `ui `ux -> -> 223 `i `uc ]
 "113
-[e :UE 160 ]
-}
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> &U _show `*Cuc ]
+"114
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 1 `i `uc :s 5C ]
 "115
+[e :UE 163 ]
+}
+"117
 [v _Telaprincipal `(v ~T0 @X0 1 ef ]
-"116
+"118
 {
 [e :U _Telaprincipal ]
 [f ]
-[v F1427 `uc ~T0 @X0 -> 16 `i s ]
-[i F1427
+[v F1446 `uc ~T0 @X0 -> 16 `i s ]
+[i F1446
 :U ..
 -> 84 `c
 -> 101 `c
@@ -459,55 +494,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 67 `c
 ..
 ]
-"118
-[v _texto `uc ~T0 @X0 -> 16 `i a ]
-[e = _texto F1427 ]
 "119
-[e = *U + &U _texto * -> -> -> 14 `i `ui `ux -> -> # *U &U _texto `ui `ux -> -> 223 `i `uc ]
+[v _texto `uc ~T0 @X0 -> 16 `i a ]
+[e = _texto F1446 ]
 "120
+[e = *U + &U _texto * -> -> -> 14 `i `ui `ux -> -> # *U &U _texto `ui `ux -> -> 223 `i `uc ]
+"121
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc -> &U _texto `*Cuc ]
-"124
-[e :UE 161 ]
+"122
+[e :UE 164 ]
 }
-"125
+"123
 [v _tempatt `(v ~T0 @X0 1 ef ]
-"126
+"124
 {
 [e :U _tempatt ]
 [f ]
-"127
+"125
 [v _temp `i ~T0 @X0 1 a ]
 [e = _temp -> ( _temperaturaLer ..  `i ]
-[v F1431 `uc ~T0 @X0 -> 0 `x s ]
-[i F1431
+[v F1450 `uc ~T0 @X0 -> 0 `x s ]
+[i F1450
 :U ..
 -> 48 `c
 -> 48 `c
 -> 0 `c
 ..
 ]
-"128
+"126
 [v _Tp `uc ~T0 @X0 3  a ]
-[e = _Tp F1431 ]
-"129
+[e = _Tp F1450 ]
+"127
 [e = *U + &U _Tp * -> -> -> 0 `i `ui `ux -> -> # *U &U _Tp `ui `ux -> + / _temp -> 10 `i -> 48 `i `uc ]
-"130
+"128
 [e = *U + &U _Tp * -> -> -> 1 `i `ui `ux -> -> # *U &U _Tp `ui `ux -> + % _temp -> 10 `i -> 48 `i `uc ]
-"131
+"129
 [e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Tp `*Cuc ]
-"132
-[e :UE 162 ]
+"130
+[e :UE 165 ]
 }
+"132
+[v _tempdht `(v ~T0 @X0 1 ef ]
 "133
-[v _TempMed `(v ~T0 @X0 1 ef ]
-"134
 {
-[e :U _TempMed ]
+[e :U _tempdht ]
 [f ]
+"134
+[v _sensor `S143 ~T0 @X0 1 a ]
 "135
-[v _Media `uc ~T0 @X0 1 a ]
-[v F1435 `uc ~T0 @X0 -> 0 `x s ]
-[i F1435
+[v _te `i ~T0 @X0 1 a ]
+[e = _te -> . . _sensor 0 1 `i ]
+[v F1455 `uc ~T0 @X0 -> 0 `x s ]
+[i F1455
 :U ..
 -> 48 `c
 -> 48 `c
@@ -515,52 +553,75 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 "136
+[v _Td `uc ~T0 @X0 3  a ]
+[e = _Td F1455 ]
+"139
+[e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Td `*Cuc ]
+"140
+[e :UE 166 ]
+}
+"142
+[v _TempMed `(v ~T0 @X0 1 ef ]
+"143
+{
+[e :U _TempMed ]
+[f ]
+"144
+[v _Media `uc ~T0 @X0 1 a ]
+[v F1459 `uc ~T0 @X0 -> 0 `x s ]
+[i F1459
+:U ..
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"145
 [v _md `uc ~T0 @X0 3  a ]
-[e = _md F1435 ]
-"137
-[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 7C ]
-"138
+[e = _md F1459 ]
+"146
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 6C ]
+"147
 [e ( _gotoxy (2 , -> -> 14 `i `uc -> -> 0 `i `uc ]
 [e ( _putLCD (1 -> -> 223 `i `uc ]
-"139
+"148
 [e = _Media ( _media ..  ]
-"140
+"149
 [e = *U + &U _md * -> -> -> 0 `i `ui `ux -> -> # *U &U _md `ui `ux -> + / -> _Media `i -> 10 `i -> 48 `i `uc ]
-"141
+"150
 [e = *U + &U _md * -> -> -> 1 `i `ui `ux -> -> # *U &U _md `ui `ux -> + % -> _Media `i -> 10 `i -> 48 `i `uc ]
-"142
+"151
 [e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _md `*Cuc ]
-"144
-[e :UE 163 ]
+"153
+[e :UE 167 ]
 }
-"146
+"155
 [v _showtemp `(v ~T0 @X0 1 ef ]
-"147
+"156
 {
 [e :U _showtemp ]
 [f ]
-"148
-[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 8C ]
-"152
-[e :UE 164 ]
+"157
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 7C ]
+"161
+[e :UE 168 ]
 }
-"153
+"162
 [v _erasertemp `(v ~T0 @X0 1 ef ]
-"154
+"163
 {
 [e :U _erasertemp ]
 [f ]
-"155
-[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 9C ]
-"156
-[e :UE 165 ]
+"164
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 8C ]
+"165
+[e :UE 169 ]
 }
 [a 4C 100 101 32 68 97 100 111 115 0 ]
 [a 3C 65 113 117 105 115 105 116 111 114 0 ]
-[a 6C 91 65 93 32 91 66 93 32 91 67 93 0 ]
-[a 5C 83 69 76 69 84 79 82 32 68 69 32 84 69 76 65 83 0 ]
 [a 2C 80 85 76 76 32 85 80 0 ]
 [a 1C 69 76 69 67 84 82 73 67 0 ]
-[a 7C 84 101 109 112 46 32 77 101 100 46 58 32 32 32 32 67 0 ]
-[a 9C 65 112 97 103 97 110 100 111 46 46 46 0 ]
-[a 8C 83 97 118 105 110 103 46 46 46 0 ]
+[a 6C 84 101 109 112 46 32 77 101 100 46 58 32 32 32 32 67 0 ]
+[a 8C 65 112 97 103 97 110 100 111 46 46 46 0 ]
+[a 7C 83 97 118 105 110 103 46 46 46 0 ]
+[a 5C 85 109 105 100 97 100 101 32 32 32 58 32 32 32 37 0 ]

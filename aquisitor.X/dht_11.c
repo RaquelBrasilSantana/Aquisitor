@@ -1,4 +1,4 @@
-*
+/*
  * File:   OneWire-DHT11.c
  * Author: curtaeletronica
  *
@@ -17,7 +17,7 @@
 
 #include <xc.h>
 #include "config.h"
-#include "oneWire-DHT11.h"
+#include "dht_11.h"
 
 #define INPUT               1
 #define OUTPUT              0
@@ -78,3 +78,4 @@ unsigned char dht( DHT * ptr )
     
     return( crc == (ptr->temperatura + ptr->umidade) );
 }
+

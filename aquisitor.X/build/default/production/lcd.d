@@ -1,1 +1,1 @@
- build/default/production/lcd.d  build/default/production/lcd.p1:  lcd.c lcd.h config.h recept.h leitorLM35_v07.h delay.h
+ build/default/production/lcd.d  build/default/production/lcd.p1:  lcd.c dht_11.h lcd.h config.h recept.h leitorLM35_v07.h delay.h

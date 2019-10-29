@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"3505 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
+"3505 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
 [n S137 . RD WR WREN WRERR . EEPGD ]
 "3504
@@ -40,7 +40,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 "3544
 [v _EECON2 `Vuc ~T0 @X0 0 e@397 ]
-"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [; <" INDF equ 00h ;# ">
 "61
 [; <" TMR0 equ 01h ;# ">
@@ -196,7 +196,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; <" EECON1 equ 018Ch ;# ">
 "3546
 [; <" EECON2 equ 018Dh ;# ">
-"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem `(v ~T0 @X0 1 ef3`*Vuc`*Euc`uc ]
 "7
 {

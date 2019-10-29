@@ -1,0 +1,1 @@
+ build/default/production/dht_11.d  build/default/production/dht_11.p1:  dht_11.c dht_11.h config.h

@@ -6,6 +6,7 @@
 #include "leitorLM35_v07.h"
 #include <stdio.h>
 #include "recept.h"
+#include "dht_11.h"
 
 #define LEDVED PORTCbits.RC0
 #define LEDAMA PORTCbits.RC1
@@ -14,6 +15,10 @@ char nr = 0;
 char tim = 1;
 int repeat = 0;
 int Controle_do_retorno = 0;
+int x;
+
+DHT sensor;
+
 void __interrupt() myISR(void)
 {  
     if(TMR1IF)
@@ -28,10 +33,12 @@ void __interrupt() myISR(void)
             repeat = 0;
             salvatemp(temperaturaLer()); //Esse codigo acontece a cada 5 minutos.
         }
-        if(repeat%10 == 0 && tim == 1){
+        if(repeat%10 == 0 && tim == 1)
+        {
                 tempatt(); 
         }
-        if(tim == 2 && ((repeat - Controle_do_retorno)>20)){
+        if(tim == 2 && ((repeat - Controle_do_retorno)>20))
+        {
             Telaprincipal(); 
             tempatt();
             tim = 1;
@@ -49,7 +56,8 @@ void main(void)
     initLCD();
     tecladoIniciar();
     temperaturaInicializar();
-    
+    initDHT11();
+
     
     SplashScreen0();
     delay(100);
@@ -63,17 +71,16 @@ void main(void)
     tmron();
     Telaprincipal();
     tempatt(); 
+    
+    
    while ( 1 )
-    {
-      
-       
+    {          
        nr = tecladoLer();
        delay(15);   
        if(nr != 0)
        {
            putLCD(nr);
-       }
-      
+       }    
                     
        switch (nr)
        {
@@ -94,6 +101,18 @@ void main(void)
                 TempMed();
                 GIE = 1;
                 break;
+                
+           case'C':
+               GIE = 0;
+               cmdLCD(LCD_CLEAR);
+               subtela();
+//                if( dht() )
+//                {
+//                x = sensor.temperatura;
+//                }
+               tim =3;
+               GIE = 1;
+               break;
                 
            case '*':
                 GIE = 0;

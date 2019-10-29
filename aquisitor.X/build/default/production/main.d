@@ -1,1 +1,1 @@
- build/default/production/main.d  build/default/production/main.p1:  main.c lcd.h config.h recept.h leitorLM35_v07.h delay.h teclado.h
+ build/default/production/main.d  build/default/production/main.p1:  main.c dht_11.h lcd.h config.h recept.h leitorLM35_v07.h delay.h teclado.h

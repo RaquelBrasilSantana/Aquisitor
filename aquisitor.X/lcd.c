@@ -6,6 +6,7 @@
 #include "leitorLM35_v07.h"
 #include <stdio.h>
 #include "recept.h"
+#include "dht_11.h"
 
 
 volatile  LCDbits_t LCD __at(0x008);  
@@ -105,22 +106,19 @@ void SplashScreen1(void)
     writeLCD(4,1, "de Dados"); 
 }
 
-void Menu(void)
+void subtela(void)
 {
-    writeLCD(0,0, "SELETOR DE TELAS");
-    writeLCD(3,1, "[A] [B] [C]"); 
-    
+    char show[16]="Temp. Amb.:   C";
+    show[15]=0xDF;
+    writeLCD(0,0, show);
+    writeLCD(0,1,"Umidade   :   %");
 }
 
 void Telaprincipal(void)
-{
-    
+{  
     char texto[16]="Temp. Atual:   C";
     texto[14]=0xDF;
-    writeLCD(0,0, texto);
-    //gotoxy(14,0);putLCD(0xDF);
-    
-    
+    writeLCD(0,0, texto);        
 }
 void tempatt (void)
 {
@@ -130,6 +128,17 @@ void tempatt (void)
     Tp[1] =(temp%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
     writeLCD(12,0,Tp); 
 }
+
+void tempdht (void)
+{
+    DHT sensor;
+    int te= sensor.temperatura ;
+    char Td[] = {"00"};
+//    Td[4] =(te/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
+//    Td[5] =(te%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
+    writeLCD(12,0,Td); 
+}
+
 void TempMed(void)
 {   
     unsigned char Media;

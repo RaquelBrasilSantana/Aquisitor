@@ -1,5 +1,5 @@
 
-# 1 "lcd.c"
+# 1 "dht_11.c"
 
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -2502,135 +2502,6 @@ extern __bank0 __bit __timeout;
 #pragma config BOREN = OFF
 #pragma config FCMEN = OFF
 
-# 11 "delay.h"
-void delay(unsigned int t);
-
-# 4 "lcd.h"
-typedef union
-{
-struct
-{
-unsigned char LO :4;
-unsigned char HI :4;
-};
-unsigned char HILO;
-} REGnibble_t;
-
-
-typedef union
-{
-struct
-{
-unsigned char BUS : 4;
-unsigned char RS : 1;
-unsigned char EN : 1;
-unsigned char B0 : 1;
-unsigned char B1 : 1;
-};
-
-} LCDbits_t;
-
-# 67
-void cmdLCD( unsigned char cmd );
-void putLCD( unsigned char c );
-void gotoxy( unsigned char x, unsigned char y );
-void writeLCD( unsigned char x, unsigned char y, const char * ptr );
-void initLCD( void );
-char lcdb0 (void);
-char lcdb1 (void);
-void SplashScreen0(void);
-void SplashScreen1(void);
-void subtela(void);
-void Telaprincipal(void);
-void TempMed(void);
-void showtemp (void);
-void tempatt (void);
-void erasertemp (void);
-void tempdht (void);
-
-# 8 "leitorLM35_v07.h"
-void temperaturaInicializar(void);
-
-unsigned int adcLer(void);
-
-unsigned char temperaturaLer(void);
-
-# 4 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 29 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 88 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
-# 6 "recept.h"
-void salvatemp(unsigned char temp);
-void resetemp(void);
-unsigned char media(void);
-unsigned char moda(void);
-unsigned char mediana(void);
-void EEPROM_write(unsigned char pont,unsigned int value);
-int EEPROM_read(unsigned char pont);
-void EEPROM_WriteByte(unsigned char eepromAddress, unsigned char eepromData);
-unsigned char EEPROM_ReadByte(unsigned char eepromAddress);
-void tmron(void);
-char looptmr(void);
-
 # 4 "dht_11.h"
 typedef union
 {
@@ -2651,158 +2522,53 @@ unsigned long umidade_temperatura;
 void initDHT11( void );
 unsigned char dht( DHT * ptr );
 
-# 12 "lcd.c"
-volatile LCDbits_t LCD __at(0x008);
-
-void initLCD( void )
+# 33 "dht_11.c"
+void initDHT11( void )
 {
-LCD.B0 = 0;
-LCD.B1 = 0;
-LCD.RS = 0;
-LCD.BUS = 0x3;
-LCD.EN = 1;
-TRISD = 0xC0;
-
-delay(10);
-
-cmdLCD(0x20);
-cmdLCD(0x28);
-cmdLCD(0x0C);
-cmdLCD(0x01);
-cmdLCD(0x02);
-
-delay(10);
+SSPCONbits.SSPEN = 0;
+PORTCbits.RC4 = 1;
+TRISCbits.TRISC4 = 1;
 }
 
-void cmdLCD( unsigned char cmd )
+unsigned char dht( DHT * ptr )
 {
-volatile REGnibble_t nibble;
+unsigned char i;
+unsigned char crc = 0;
 
-nibble.HILO = cmd;
-LCD.RS = 0;
-LCD.BUS = nibble.HI ;
-LCD.EN = 0;
-if( cmd == 0x01 || cmd == 0x02 )
-delay(2);
-else
-delay(2);
-LCD.EN = 1;
+TRISCbits.TRISC4 = 0;
+PORTCbits.RC4 = 0;
+_delay((unsigned long)((20)*(20000000/4000.0)));
+PORTCbits.RC4 = 1;
 
-if( cmd != (0x20) )
+TRISCbits.TRISC4 = 1;
+while( PORTCbits.RC4 );
+while( !PORTCbits.RC4 );
+while( PORTCbits.RC4 );
+
+for( i=0; i<32; i++ )
 {
-LCD.RS = 0;
-LCD.BUS = nibble.LO;
-LCD.EN = 0;
-if( cmd == 0x01 || cmd == 0x02 )
-delay(2);
-else
-_delay((unsigned long)((40)*(20000000/4000000.0)));
-LCD.EN = 1;
+while( !PORTCbits.RC4 );
+_delay((unsigned long)((40)*(20000000/4000000.0)));;
+ptr->umidade_temperatura <<= 1;
+if( PORTCbits.RC4 )
+{
+ptr->umidade_temperatura |= 1;
+while( PORTCbits.RC4 );
 }
 }
 
-void putLCD( unsigned char c )
+for( i=0; i<8; i++ )
 {
-volatile REGnibble_t nibble;
-
-nibble.HILO = c;
-LCD.RS = 1;
-LCD.BUS= nibble.HI;
-LCD.EN = 0;
-delay(2);
-LCD.EN = 1;
-
-LCD.RS = 1;
-LCD.BUS = nibble.LO;
-LCD.EN = 0;
-delay(2);
-LCD.EN = 1;
+while( !PORTCbits.RC4 );
+_delay((unsigned long)((40)*(20000000/4000000.0)));;
+crc <<= 1;
+if( PORTCbits.RC4 )
+{
+crc |= 1;
+while( PORTCbits.RC4 );
 }
-void gotoxy( unsigned char x, unsigned char y )
-{
-cmdLCD((0x80 | 0xC0 * y) + (x & 0X3F));
-}
-void writeLCD( unsigned char x, unsigned char y, const char * ptr )
-{
-gotoxy(x,y);
-while( *ptr )
-putLCD( *ptr++ );
 }
 
-char lcdb0(void)
-{
-return(LCD.B0);
-}
-char lcdb1(void)
-{
-return(LCD.B1);
+return( crc == (ptr->temperatura + ptr->umidade) );
 }
 
-void SplashScreen0(void)
-{
-writeLCD(4,0, "ELECTRIC");
-writeLCD(4,1, "PULL UP");
-}
-void SplashScreen1(void)
-{
-writeLCD(4,0, "Aquisitor");
-writeLCD(4,1, "de Dados");
-}
-
-void subtela(void)
-{
-char show[16]="Temp. Amb.:   C";
-show[15]=0xDF;
-writeLCD(0,0, show);
-writeLCD(0,1,"Umidade   :   %");
-}
-
-void Telaprincipal(void)
-{
-char texto[16]="Temp. Atual:   C";
-texto[14]=0xDF;
-writeLCD(0,0, texto);
-}
-void tempatt (void)
-{
-int temp = temperaturaLer() ;
-char Tp[] = {"00"};
-Tp[0] =(temp/10)+0x30;
-Tp[1] =(temp%10)+0x30;
-writeLCD(12,0,Tp);
-}
-
-void tempdht (void)
-{
-DHT sensor;
-int te= sensor.temperatura ;
-char Td[] = {"00"};
-
-
-writeLCD(12,0,Td);
-}
-
-void TempMed(void)
-{
-unsigned char Media;
-char md[] = {"00"};
-writeLCD(0,0, "Temp. Med.:    C");
-gotoxy(14,0);putLCD(0xDF);
-Media = media();
-md[0] =(Media/10)+0x30;
-md[1] =(Media%10)+0x30;
-writeLCD(12,0,md);
-
-}
-
-void showtemp (void)
-{
-writeLCD(0,0, "Saving...");
-
-
-
-}
-void erasertemp (void)
-{
-writeLCD(0,0, "Apagando...");
-}

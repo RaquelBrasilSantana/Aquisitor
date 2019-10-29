@@ -4,6 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Z:/Aquisitor/aquisitor.X/main.c</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/lcd.h</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/lcd.c</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/dht_11.c</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/leitorLM35_v07.c</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/dht_11.h</file>
+            <file>file:/Z:/Aquisitor/aquisitor.X/teclado.h</file>
         </group>
     </open-files>
 </project-private>

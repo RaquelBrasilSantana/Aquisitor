@@ -73,11 +73,12 @@ char lcdb0 (void);
 char lcdb1 (void);
 void SplashScreen0(void);
 void SplashScreen1(void);
-void Menu(void);
+void subtela(void);
 void Telaprincipal(void);
 void TempMed(void);
 void showtemp (void);
 void tempatt (void);
 void erasertemp (void);
+void tempdht (void);
 
 #endif	/* LCD_H */
