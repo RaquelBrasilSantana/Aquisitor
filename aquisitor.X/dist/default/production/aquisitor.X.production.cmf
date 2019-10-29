@@ -87,7 +87,7 @@ strings STRING 0 800 800 7C 2
 dataBANK0 BANK0 1 60 60 1 1
 dataBANK1 BANK1 1 E2 E2 9 1
 dataBANK3 BANK3 1 190 190 20 1
-$C:\Users\18263814\AppData\Local\Temp\s9g8.o
+$C:\Users\18263814\AppData\Local\Temp\sbgg.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 12 12 3 2
 config CONFIG 0 2007 2007 1 2
@@ -150,50 +150,50 @@ STRING 1800-1F0D 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\aquisitor.X.production.o
-15 cinit CODE >1612:C:\Users\18263814\AppData\Local\Temp\s9g8.
-15 cinit CODE >1615:C:\Users\18263814\AppData\Local\Temp\s9g8.
-15 cinit CODE >1717:C:\Users\18263814\AppData\Local\Temp\s9g8.
-16 cinit CODE >1718:C:\Users\18263814\AppData\Local\Temp\s9g8.
-17 cinit CODE >1719:C:\Users\18263814\AppData\Local\Temp\s9g8.
-18 cinit CODE >1720:C:\Users\18263814\AppData\Local\Temp\s9g8.
-19 cinit CODE >1721:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1A cinit CODE >1722:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1B cinit CODE >1723:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1C cinit CODE >1724:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1D cinit CODE >1725:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1E cinit CODE >1726:C:\Users\18263814\AppData\Local\Temp\s9g8.
-23 cinit CODE >1730:C:\Users\18263814\AppData\Local\Temp\s9g8.
-24 cinit CODE >1731:C:\Users\18263814\AppData\Local\Temp\s9g8.
-25 cinit CODE >1732:C:\Users\18263814\AppData\Local\Temp\s9g8.
-26 cinit CODE >1733:C:\Users\18263814\AppData\Local\Temp\s9g8.
-27 cinit CODE >1734:C:\Users\18263814\AppData\Local\Temp\s9g8.
-28 cinit CODE >1735:C:\Users\18263814\AppData\Local\Temp\s9g8.
-29 cinit CODE >1736:C:\Users\18263814\AppData\Local\Temp\s9g8.
-2A cinit CODE >1737:C:\Users\18263814\AppData\Local\Temp\s9g8.
-2B cinit CODE >1738:C:\Users\18263814\AppData\Local\Temp\s9g8.
-2C cinit CODE >1739:C:\Users\18263814\AppData\Local\Temp\s9g8.
-31 cinit CODE >1743:C:\Users\18263814\AppData\Local\Temp\s9g8.
-36 cinit CODE >1744:C:\Users\18263814\AppData\Local\Temp\s9g8.
-37 cinit CODE >1748:C:\Users\18263814\AppData\Local\Temp\s9g8.
-38 cinit CODE >1749:C:\Users\18263814\AppData\Local\Temp\s9g8.
-39 cinit CODE >1750:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3A cinit CODE >1751:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3B cinit CODE >1752:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3C cinit CODE >1753:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3D cinit CODE >1754:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3E cinit CODE >1757:C:\Users\18263814\AppData\Local\Temp\s9g8.
-3F cinit CODE >1758:C:\Users\18263814\AppData\Local\Temp\s9g8.
-40 cinit CODE >1759:C:\Users\18263814\AppData\Local\Temp\s9g8.
-41 cinit CODE >1760:C:\Users\18263814\AppData\Local\Temp\s9g8.
-42 cinit CODE >1761:C:\Users\18263814\AppData\Local\Temp\s9g8.
-43 cinit CODE >1762:C:\Users\18263814\AppData\Local\Temp\s9g8.
-44 cinit CODE >1763:C:\Users\18263814\AppData\Local\Temp\s9g8.
-45 cinit CODE >1764:C:\Users\18263814\AppData\Local\Temp\s9g8.
-46 cinit CODE >1765:C:\Users\18263814\AppData\Local\Temp\s9g8.
-47 cinit CODE >1766:C:\Users\18263814\AppData\Local\Temp\s9g8.
-48 cinit CODE >1772:C:\Users\18263814\AppData\Local\Temp\s9g8.
-48 cinit CODE >1774:C:\Users\18263814\AppData\Local\Temp\s9g8.
-49 cinit CODE >1775:C:\Users\18263814\AppData\Local\Temp\s9g8.
+15 cinit CODE >1612:C:\Users\18263814\AppData\Local\Temp\sbgg.
+15 cinit CODE >1615:C:\Users\18263814\AppData\Local\Temp\sbgg.
+15 cinit CODE >1717:C:\Users\18263814\AppData\Local\Temp\sbgg.
+16 cinit CODE >1718:C:\Users\18263814\AppData\Local\Temp\sbgg.
+17 cinit CODE >1719:C:\Users\18263814\AppData\Local\Temp\sbgg.
+18 cinit CODE >1720:C:\Users\18263814\AppData\Local\Temp\sbgg.
+19 cinit CODE >1721:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1A cinit CODE >1722:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1B cinit CODE >1723:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1C cinit CODE >1724:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1D cinit CODE >1725:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1E cinit CODE >1726:C:\Users\18263814\AppData\Local\Temp\sbgg.
+23 cinit CODE >1730:C:\Users\18263814\AppData\Local\Temp\sbgg.
+24 cinit CODE >1731:C:\Users\18263814\AppData\Local\Temp\sbgg.
+25 cinit CODE >1732:C:\Users\18263814\AppData\Local\Temp\sbgg.
+26 cinit CODE >1733:C:\Users\18263814\AppData\Local\Temp\sbgg.
+27 cinit CODE >1734:C:\Users\18263814\AppData\Local\Temp\sbgg.
+28 cinit CODE >1735:C:\Users\18263814\AppData\Local\Temp\sbgg.
+29 cinit CODE >1736:C:\Users\18263814\AppData\Local\Temp\sbgg.
+2A cinit CODE >1737:C:\Users\18263814\AppData\Local\Temp\sbgg.
+2B cinit CODE >1738:C:\Users\18263814\AppData\Local\Temp\sbgg.
+2C cinit CODE >1739:C:\Users\18263814\AppData\Local\Temp\sbgg.
+31 cinit CODE >1743:C:\Users\18263814\AppData\Local\Temp\sbgg.
+36 cinit CODE >1744:C:\Users\18263814\AppData\Local\Temp\sbgg.
+37 cinit CODE >1748:C:\Users\18263814\AppData\Local\Temp\sbgg.
+38 cinit CODE >1749:C:\Users\18263814\AppData\Local\Temp\sbgg.
+39 cinit CODE >1750:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3A cinit CODE >1751:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3B cinit CODE >1752:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3C cinit CODE >1753:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3D cinit CODE >1754:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3E cinit CODE >1757:C:\Users\18263814\AppData\Local\Temp\sbgg.
+3F cinit CODE >1758:C:\Users\18263814\AppData\Local\Temp\sbgg.
+40 cinit CODE >1759:C:\Users\18263814\AppData\Local\Temp\sbgg.
+41 cinit CODE >1760:C:\Users\18263814\AppData\Local\Temp\sbgg.
+42 cinit CODE >1761:C:\Users\18263814\AppData\Local\Temp\sbgg.
+43 cinit CODE >1762:C:\Users\18263814\AppData\Local\Temp\sbgg.
+44 cinit CODE >1763:C:\Users\18263814\AppData\Local\Temp\sbgg.
+45 cinit CODE >1764:C:\Users\18263814\AppData\Local\Temp\sbgg.
+46 cinit CODE >1765:C:\Users\18263814\AppData\Local\Temp\sbgg.
+47 cinit CODE >1766:C:\Users\18263814\AppData\Local\Temp\sbgg.
+48 cinit CODE >1772:C:\Users\18263814\AppData\Local\Temp\sbgg.
+48 cinit CODE >1774:C:\Users\18263814\AppData\Local\Temp\sbgg.
+49 cinit CODE >1775:C:\Users\18263814\AppData\Local\Temp\sbgg.
 4 intentry CODE >22:Z:\Aquisitor\aquisitor.X\main.c
 1F99 text59 CODE >4:Z:\Aquisitor\aquisitor.X\delay.c
 1F99 text59 CODE >6:Z:\Aquisitor\aquisitor.X\delay.c
@@ -1163,23 +1163,23 @@ E83 maintext CODE >146:Z:\Aquisitor\aquisitor.X\main.c
 E84 maintext CODE >77:Z:\Aquisitor\aquisitor.X\main.c
 E84 maintext CODE >150:Z:\Aquisitor\aquisitor.X\main.c
 E85 maintext CODE >151:Z:\Aquisitor\aquisitor.X\main.c
-1F57 inittext CODE >1691:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F57 inittext CODE >1692:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F58 inittext CODE >1693:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F59 inittext CODE >1694:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F5A inittext CODE >1695:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F5B inittext CODE >1702:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F5B inittext CODE >1703:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F60 inittext CODE >1704:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F61 inittext CODE >1705:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F62 inittext CODE >1706:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F63 inittext CODE >1707:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F64 inittext CODE >1708:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F65 inittext CODE >1709:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F66 inittext CODE >1710:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F67 inittext CODE >1711:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F68 inittext CODE >1712:C:\Users\18263814\AppData\Local\Temp\s9g8.
-1F69 inittext CODE >1713:C:\Users\18263814\AppData\Local\Temp\s9g8.
+1F57 inittext CODE >1691:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F57 inittext CODE >1692:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F58 inittext CODE >1693:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F59 inittext CODE >1694:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F5A inittext CODE >1695:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F5B inittext CODE >1702:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F5B inittext CODE >1703:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F60 inittext CODE >1704:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F61 inittext CODE >1705:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F62 inittext CODE >1706:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F63 inittext CODE >1707:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F64 inittext CODE >1708:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F65 inittext CODE >1709:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F66 inittext CODE >1710:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F67 inittext CODE >1711:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F68 inittext CODE >1712:C:\Users\18263814\AppData\Local\Temp\sbgg.
+1F69 inittext CODE >1713:C:\Users\18263814\AppData\Local\Temp\sbgg.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1231,12 +1231,12 @@ _ADIE 466 0 ABS 0 - dist/default/production\aquisitor.X.production.o
 _ADIF 66 0 ABS 0 - dist/default/production\aquisitor.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\aquisitor.X.production.o
 _WREN C62 0 ABS 0 - dist/default/production\aquisitor.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\18263814\AppData\Local\Temp\s9g8.o
+___sp 0 0 STACK 2 stack C:\Users\18263814\AppData\Local\Temp\sbgg.o
 _main 1A9A 0 CODE 0 maintext dist/default/production\aquisitor.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\aquisitor.X.production.o
 dht@i A5 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 __end_of_erasertemp 3E72 0 CODE 0 text21 dist/default/production\aquisitor.X.production.o
-start 24 0 CODE 0 init C:\Users\18263814\AppData\Local\Temp\s9g8.o
+start 24 0 CODE 0 init C:\Users\18263814\AppData\Local\Temp\sbgg.o
 dht@crc A3 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 dht@ptr A4 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 ___flmul@aexp C0 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
@@ -1270,12 +1270,12 @@ __end_ofi1_temperaturaLer 2910 0 CODE 0 text41 dist/default/production\aquisitor
 __end_of_tecladoIniciar 3EAE 0 CODE 0 text12 dist/default/production\aquisitor.X.production.o
 __end_ofi1___xxtofl 18FC 0 CODE 0 text43 dist/default/production\aquisitor.X.production.o
 __end_ofi1_EEPROM_WriteByte 22F4 0 CODE 0 text51 dist/default/production\aquisitor.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\s9g8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\18263814\AppData\Local\Temp\sbgg.o
 _salvatemp 215E 0 CODE 0 text15 dist/default/production\aquisitor.X.production.o
 cmdLCD@cmd A5 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 __size_ofi1_temperaturaLer 0 0 ABS 0 - dist/default/production\aquisitor.X.production.o
@@ -1388,7 +1388,7 @@ i1___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\aquisitor.
 __end_ofi1__Umul8_16 23E8 0 CODE 0 text46 dist/default/production\aquisitor.X.production.o
 __size_of_tecladoLer 0 0 ABS 0 - dist/default/production\aquisitor.X.production.o
 __end_of_initLCD 276C 0 CODE 0 text19 dist/default/production\aquisitor.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\18263814\AppData\Local\Temp\s9g8.o
+___int_sp 0 0 STACK 2 stack C:\Users\18263814\AppData\Local\Temp\sbgg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1495,7 +1495,7 @@ _EEPROM_write 3FCA 0 CODE 0 text17 dist/default/production\aquisitor.X.productio
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor A0 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 __stringtab 1000 0 STRING 0 strings dist/default/production\aquisitor.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\18263814\AppData\Local\Temp\s9g8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\18263814\AppData\Local\Temp\sbgg.o
 i1_putLCD 2544 0 CODE 0 text56 dist/default/production\aquisitor.X.production.o
 __end_of___xxtofl FF4 0 CODE 0 text7 dist/default/production\aquisitor.X.production.o
 __size_of_EEPROM_WriteByte 0 0 ABS 0 - dist/default/production\aquisitor.X.production.o
@@ -1607,8 +1607,8 @@ __size_ofi1__Umul8_16 0 0 ABS 0 - dist/default/production\aquisitor.X.production
 i1_tempatt 1100 0 CODE 0 text40 dist/default/production\aquisitor.X.production.o
 putLCD@nibble A6 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 i1_EEPROM_ReadByte 3F64 0 CODE 0 text53 dist/default/production\aquisitor.X.production.o
-stackhi 0 0 ABS 0 - C:\Users\18263814\AppData\Local\Temp\s9g8.o
-stacklo 0 0 ABS 0 - C:\Users\18263814\AppData\Local\Temp\s9g8.o
+stackhi 0 0 ABS 0 - C:\Users\18263814\AppData\Local\Temp\sbgg.o
+stacklo 0 0 ABS 0 - C:\Users\18263814\AppData\Local\Temp\sbgg.o
 ?i1_adcLer 74 0 COMMON 1 cstackCOMMON dist/default/production\aquisitor.X.production.o
 writeLCD@x AF 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
 writeLCD@y AB 0 BANK1 1 cstackBANK1 dist/default/production\aquisitor.X.production.o
