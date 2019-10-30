@@ -2607,6 +2607,7 @@ void showtemp (void);
 void tempatt (void);
 void erasertemp (void);
 void tempdht (void);
+void intTOstr( int ui16, char * str, unsigned char final );
 
 # 6 "recept.h"
 void salvatemp(unsigned char temp);

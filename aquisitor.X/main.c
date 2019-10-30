@@ -18,6 +18,8 @@ int Controle_do_retorno = 0;
 int x;
 
 DHT sensor;
+unsigned char umidadeVet[4] = "   ";
+unsigned char tempVet[4] = "   ";
 
 void __interrupt() myISR(void)
 {  
@@ -50,14 +52,13 @@ void __interrupt() myISR(void)
 
 void main(void) 
 {
-    TRISC=0x00;
-    PORTC=0;
+//    TRISC=0x00;
+//    PORTC=0;
     
     initLCD();
     tecladoIniciar();
     temperaturaInicializar();
     initDHT11();
-
     
     SplashScreen0();
     delay(100);
@@ -72,19 +73,11 @@ void main(void)
     Telaprincipal();
     tempatt(); 
     
-
-    
-   while ( 1 )
+    while ( 1 )
     {          
        nr = tecladoLer();
        delay(15);   
-       if(nr != 0)
-       {
-           putLCD(nr);
-       } 
-       
-
-                    
+                   
        switch (nr)
        {
            
@@ -106,22 +99,22 @@ void main(void)
                 break;
                 
            case'C':
-               GIE = 0;
-               cmdLCD(LCD_CLEAR);
-               subtela();   
-                if( dht(&sensor) )
+                GIE = 0;
+                cmdLCD(LCD_CLEAR);
+                writeLCD(0,0,"Temp. Amb:    \337C" );
+                writeLCD(0,1,"Umidade  :     %" );
+                
+                if( dht( &sensor ) )    // CRC ok
                 {
-                    int Valor_TempDHt11 = sensor.temperatura; 
-                    sensor.umidade;
-                    char Td[] = {"00"};
-                    Td[0] =(Valor_TempDHt11/10)+0x30;   //Encontra a dezena da temperatura programada e converte em ASCII 
-                    Td[1] =(Valor_TempDHt11%10)+0x30;  //Encontra a unidade da temperatura programada e converte em ASCII 
-                    writeLCD(12,0,Td);
+                    intTOstr((unsigned int)sensor.temperatura,  tempVet, 1 );
+                    intTOstr((unsigned int)sensor.umidade,      umidadeVet, 1 );
                 }
-               tempdht();
-               tim =3;
-               GIE = 1;
-               break;
+                writeLCD(10,0, tempVet );
+                writeLCD(10,1,umidadeVet );
+                
+                tim =3;
+                GIE = 1;
+                break;
                 
            case '*':
                 GIE = 0;

@@ -10,6 +10,7 @@
       <itemPath>leitorLM35_v07.h</itemPath>
       <itemPath>recept.h</itemPath>
       <itemPath>teclado.h</itemPath>
+      <itemPath>dht_11.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +24,7 @@
       <itemPath>leitorLM35_v07.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>recept.c</itemPath>
+      <itemPath>dht_11.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

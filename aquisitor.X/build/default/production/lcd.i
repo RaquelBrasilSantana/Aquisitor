@@ -2547,6 +2547,7 @@ void showtemp (void);
 void tempatt (void);
 void erasertemp (void);
 void tempdht (void);
+void intTOstr( int ui16, char * str, unsigned char final );
 
 # 8 "leitorLM35_v07.h"
 void temperaturaInicializar(void);
@@ -2798,4 +2799,16 @@ writeLCD(0,0, "Saving...");
 void erasertemp (void)
 {
 writeLCD(0,0, "Apagando...");
+}
+
+void intTOstr( int ui16, char * str, unsigned char final )
+{
+for(int div=10000; div>=1; div/=10 )
+{
+*str = (ui16 / div) + '0';
+ui16 = ui16 % div;
+++str;
+}
+if( final )
+*str = 0;
 }

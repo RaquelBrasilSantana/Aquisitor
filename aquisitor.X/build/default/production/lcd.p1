@@ -425,8 +425,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U _subtela ]
 [f ]
-[v F1443 `uc ~T0 @X0 -> 16 `i s ]
-[i F1443
+[v F1447 `uc ~T0 @X0 -> 16 `i s ]
+[i F1447
 :U ..
 -> 84 `c
 -> 101 `c
@@ -448,7 +448,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 "111
 [v _show `uc ~T0 @X0 -> 16 `i a ]
-[e = _show F1443 ]
+[e = _show F1447 ]
 "112
 [e = *U + &U _show * -> -> -> 14 `i `ui `ux -> -> # *U &U _show `ui `ux -> -> 223 `i `uc ]
 "113
@@ -464,8 +464,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U _Telaprincipal ]
 [f ]
-[v F1446 `uc ~T0 @X0 -> 16 `i s ]
-[i F1446
+[v F1450 `uc ~T0 @X0 -> 16 `i s ]
+[i F1450
 :U ..
 -> 84 `c
 -> 101 `c
@@ -487,7 +487,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 "119
 [v _texto `uc ~T0 @X0 -> 16 `i a ]
-[e = _texto F1446 ]
+[e = _texto F1450 ]
 "120
 [e = *U + &U _texto * -> -> -> 14 `i `ui `ux -> -> # *U &U _texto `ui `ux -> -> 223 `i `uc ]
 "121
@@ -504,8 +504,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "125
 [v _temp `i ~T0 @X0 1 a ]
 [e = _temp -> ( _temperaturaLer ..  `i ]
-[v F1450 `uc ~T0 @X0 -> 0 `x s ]
-[i F1450
+[v F1454 `uc ~T0 @X0 -> 0 `x s ]
+[i F1454
 :U ..
 -> 48 `c
 -> 48 `c
@@ -514,7 +514,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 "126
 [v _Tp `uc ~T0 @X0 3  a ]
-[e = _Tp F1450 ]
+[e = _Tp F1454 ]
 "127
 [e = *U + &U _Tp * -> -> -> 0 `i `ui `ux -> -> # *U &U _Tp `ui `ux -> + / _temp -> 10 `i -> 48 `i `uc ]
 "128
@@ -541,8 +541,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "143
 [v _Media `uc ~T0 @X0 1 a ]
-[v F1455 `uc ~T0 @X0 -> 0 `x s ]
-[i F1455
+[v F1459 `uc ~T0 @X0 -> 0 `x s ]
+[i F1459
 :U ..
 -> 48 `c
 -> 48 `c
@@ -551,7 +551,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 "144
 [v _md `uc ~T0 @X0 3  a ]
-[e = _md F1455 ]
+[e = _md F1459 ]
 "145
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 6C ]
 "146
@@ -589,6 +589,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 8C ]
 "161
 [e :UE 169 ]
+}
+"163
+[v _intTOstr `(v ~T0 @X0 1 ef3`i`*uc`uc ]
+"164
+{
+[e :U _intTOstr ]
+"163
+[v _ui16 `i ~T0 @X0 1 r1 ]
+[v _str `*uc ~T0 @X0 1 r2 ]
+[v _final `uc ~T0 @X0 1 r3 ]
+"164
+[f ]
+"165
+{
+[v _div `i ~T0 @X0 1 a ]
+[e = _div -> 10000 `i ]
+[e $ >= _div -> 1 `i 171  ]
+[e $U 172  ]
+"166
+[e :U 171 ]
+{
+"167
+[e = *U _str -> + -> / _ui16 _div `ui -> 48 `ui `uc ]
+"168
+[e = _ui16 % _ui16 _div ]
+"169
+[e =+ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"170
+}
+"165
+[e =/ _div -> -> 10 `uc `i ]
+[e $ >= _div -> 1 `i 171  ]
+[e :U 172 ]
+"170
+}
+"171
+[e $ ! != -> _final `i -> -> -> 0 `i `uc `i 174  ]
+"172
+[e = *U _str -> -> 0 `i `uc ]
+[e :U 174 ]
+"173
+[e :UE 170 ]
 }
 [a 4C 100 101 32 68 97 100 111 115 0 ]
 [a 3C 65 113 117 105 115 105 116 111 114 0 ]

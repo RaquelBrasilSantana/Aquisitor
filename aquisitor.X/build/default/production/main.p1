@@ -69,11 +69,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "77
 [v _Telaprincipal `(v ~T0 @X0 0 ef ]
 [p mainexit ]
-"1540 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"290
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"71 lcd.h
+"71
 [v _initLCD `(v ~T0 @X0 0 ef ]
 "8 leitorLM35_v07.h
 [v _temperaturaInicializar `(v ~T0 @X0 0 ef ]
@@ -89,18 +85,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SplashScreen1 `(v ~T0 @X0 0 ef ]
 "15 recept.h
 [v _tmron `(v ~T0 @X0 0 ef ]
-"68 lcd.h
-[v _putLCD `(v ~T0 @X0 0 ef1`uc ]
-"78
+"78 lcd.h
 [v _TempMed `(v ~T0 @X0 0 ef ]
-"76
-[v _subtela `(v ~T0 @X0 0 ef ]
+"70
+[v _writeLCD `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
 "21 dht_11.h
 [v _dht `(uc ~T0 @X0 0 ef1`*S175 ]
-"70 lcd.h
-[v _writeLCD `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
-"82
-[v _tempdht `(v ~T0 @X0 0 ef ]
+"83 lcd.h
+[v _intTOstr `(v ~T0 @X0 0 ef3`i`*uc`uc ]
 "79
 [v _showtemp `(v ~T0 @X0 0 ef ]
 "81
@@ -497,253 +489,253 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _x `i ~T0 @X0 1 e ]
 "20
 [v _sensor `S175 ~T0 @X0 1 e ]
-[v $root$_myISR `(v ~T0 @X0 0 e ]
-"22
-[v _myISR `(v ~T10 @X0 1 ef ]
-"23
-{
-[e :U _myISR ]
-[f ]
-"24
-[e $ ! _TMR1IF 179  ]
-"25
-{
-"27
-[e = _TMR1IF -> -> 0 `i `b ]
-"28
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"29
-[e = _TMR1L = _TMR1H -> -> 0 `i `uc ]
-"30
-[e ++ _repeat -> 1 `i ]
-"31
-[e $ ! >= _repeat -> 2861 `i 180  ]
-"32
-{
-"33
-[e = _repeat -> 0 `i ]
-"34
-[e ( _salvatemp (1 ( _temperaturaLer ..  ]
-"35
-}
-[e :U 180 ]
-"36
-[e $ ! && == % _repeat -> 10 `i -> 0 `i == -> _tim `i -> 1 `i 181  ]
-"37
-{
-"38
-[e ( _tempatt ..  ]
-"39
-}
-[e :U 181 ]
-"40
-[e $ ! && == -> _tim `i -> 2 `i > - _repeat _Controle_do_retorno -> 20 `i 182  ]
-"41
-{
-"42
-[e ( _Telaprincipal ..  ]
-"43
-[e ( _tempatt ..  ]
-"44
-[e = _tim -> -> 1 `i `uc ]
-"45
-[e = _Controle_do_retorno -> 0 `i ]
-"46
-}
-[e :U 182 ]
-"47
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"48
-}
-[e :U 179 ]
-"49
-[e :UE 178 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"51
-[v _main `(v ~T0 @X0 1 ef ]
-"52
-{
-[e :U _main ]
-[f ]
-"53
-[e = _TRISC -> -> 0 `i `uc ]
-"54
-[e = _PORTC -> -> 0 `i `uc ]
-"56
-[e ( _initLCD ..  ]
-"57
-[e ( _tecladoIniciar ..  ]
-"58
-[e ( _temperaturaInicializar ..  ]
-"59
-[e ( _initDHT11 ..  ]
-"62
-[e ( _SplashScreen0 ..  ]
-"63
-[e ( _delay (1 -> -> 100 `i `ui ]
-"64
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"65
-[e ( _SplashScreen1 ..  ]
-"66
-[e ( _delay (1 -> -> 100 `i `ui ]
-"68
-[e ( _tempatt ..  ]
-"69
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"71
-[e ( _tmron ..  ]
-"72
-[e ( _Telaprincipal ..  ]
-"73
-[e ( _tempatt ..  ]
-"77
-[e :U 185 ]
-"78
-{
-"79
-[e = _nr ( _tecladoLer ..  ]
-"80
-[e ( _delay (1 -> -> 15 `i `ui ]
-"81
-[e $ ! != -> _nr `i -> 0 `i 187  ]
-"82
-{
-"83
-[e ( _putLCD (1 _nr ]
-"84
-}
-[e :U 187 ]
-"88
-[e $U 189  ]
-"89
-{
-"91
-[e :U 190 ]
-"92
-[e = _GIE -> -> 0 `i `b ]
-"93
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"94
-[e ( _Telaprincipal ..  ]
-"95
-[e ( _tempatt ..  ]
-"96
-[e = _tim -> -> 1 `i `uc ]
-"97
-[e = _GIE -> -> 1 `i `b ]
-"98
-[e $U 188  ]
-"100
-[e :U 191 ]
-"101
-[e = _GIE -> -> 0 `i `b ]
-"102
-[e = _tim -> -> 0 `i `uc ]
-"103
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"104
-[e ( _TempMed ..  ]
-"105
-[e = _GIE -> -> 1 `i `b ]
-"106
-[e $U 188  ]
-"108
-[e :U 192 ]
-"109
-[e = _GIE -> -> 0 `i `b ]
-"110
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"111
-[e ( _subtela ..  ]
-"112
-[e $ ! != -> ( _dht (1 &U _sensor `i -> -> -> 0 `i `uc `i 193  ]
-"113
-{
-"114
-[e . . _sensor 0 1 ]
-"115
-[e . . _sensor 0 3 ]
-[v F1443 `uc ~T0 @X0 -> 0 `x s ]
-[i F1443
+"21
+[v _umidadeVet `uc ~T0 @X0 -> 4 `i e ]
+[i _umidadeVet
 :U ..
--> 48 `c
--> 48 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
 -> 0 `c
 ..
 ]
-"116
-[v _Td `uc ~T0 @X0 3  a ]
-[e = _Td F1443 ]
-"119
-[e ( _writeLCD (3 , , -> -> 12 `i `uc -> -> 0 `i `uc -> &U _Td `*Cuc ]
-"120
-}
-[e :U 193 ]
-"121
-[e ( _tempdht ..  ]
-"122
-[e = _tim -> -> 3 `i `uc ]
-"123
-[e = _GIE -> -> 1 `i `b ]
-"124
-[e $U 188  ]
-"126
-[e :U 194 ]
-"127
-[e = _GIE -> -> 0 `i `b ]
-"128
-[e = _tim -> -> 2 `i `uc ]
-"129
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"130
-[e ( _showtemp ..  ]
-"131
+"22
+[v _tempVet `uc ~T0 @X0 -> 4 `i e ]
+[i _tempVet
+:U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v $root$_myISR `(v ~T0 @X0 0 e ]
+"24
+[v _myISR `(v ~T10 @X0 1 ef ]
+"25
+{
+[e :U _myISR ]
+[f ]
+"26
+[e $ ! _TMR1IF 179  ]
+"27
+{
+"29
+[e = _TMR1IF -> -> 0 `i `b ]
+"30
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"31
+[e = _TMR1L = _TMR1H -> -> 0 `i `uc ]
+"32
+[e ++ _repeat -> 1 `i ]
+"33
+[e $ ! >= _repeat -> 2861 `i 180  ]
+"34
+{
+"35
+[e = _repeat -> 0 `i ]
+"36
 [e ( _salvatemp (1 ( _temperaturaLer ..  ]
-"132
-[e = _Controle_do_retorno _repeat ]
-"133
-[e = _GIE -> -> 1 `i `b ]
-"134
-[e $U 188  ]
-"136
-[e :U 195 ]
-"137
-[e = _GIE -> -> 0 `i `b ]
-"138
-[e = _tim -> -> 2 `i `uc ]
-"139
-[e ( _cmdLCD (1 -> -> 1 `i `uc ]
-"140
-[e ( _erasertemp ..  ]
-"141
-[e ( _resetemp ..  ]
-"142
-[e = _Controle_do_retorno _repeat ]
-"143
-[e = _GIE -> -> 1 `i `b ]
-"144
-[e $U 188  ]
-"146
+"37
 }
+[e :U 180 ]
+"38
+[e $ ! && == % _repeat -> 10 `i -> 0 `i == -> _tim `i -> 1 `i 181  ]
+"39
+{
+"40
+[e ( _tempatt ..  ]
+"41
+}
+[e :U 181 ]
+"42
+[e $ ! && == -> _tim `i -> 2 `i > - _repeat _Controle_do_retorno -> 20 `i 182  ]
+"43
+{
+"44
+[e ( _Telaprincipal ..  ]
+"45
+[e ( _tempatt ..  ]
+"46
+[e = _tim -> -> 1 `i `uc ]
+"47
+[e = _Controle_do_retorno -> 0 `i ]
+"48
+}
+[e :U 182 ]
+"49
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"50
+}
+[e :U 179 ]
+"51
+[e :UE 178 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"53
+[v _main `(v ~T0 @X0 1 ef ]
+"54
+{
+[e :U _main ]
+[f ]
+"58
+[e ( _initLCD ..  ]
+"59
+[e ( _tecladoIniciar ..  ]
+"60
+[e ( _temperaturaInicializar ..  ]
+"61
+[e ( _initDHT11 ..  ]
+"63
+[e ( _SplashScreen0 ..  ]
+"64
+[e ( _delay (1 -> -> 100 `i `ui ]
+"65
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"66
+[e ( _SplashScreen1 ..  ]
+"67
+[e ( _delay (1 -> -> 100 `i `ui ]
+"69
+[e ( _tempatt ..  ]
+"70
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"72
+[e ( _tmron ..  ]
+"73
+[e ( _Telaprincipal ..  ]
+"74
+[e ( _tempatt ..  ]
+"76
+[e :U 185 ]
+"77
+{
+"78
+[e = _nr ( _tecladoLer ..  ]
+"79
+[e ( _delay (1 -> -> 15 `i `ui ]
+"81
 [e $U 188  ]
-"88
+"82
+{
+"84
 [e :U 189 ]
-[e [\ _nr , $ -> -> 65 `ui `uc 190
- , $ -> -> 66 `ui `uc 191
- , $ -> -> 67 `ui `uc 192
- , $ -> -> 42 `ui `uc 194
- , $ -> -> 35 `ui `uc 195
- 188 ]
-"146
+"85
+[e = _GIE -> -> 0 `i `b ]
+"86
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"87
+[e ( _Telaprincipal ..  ]
+"88
+[e ( _tempatt ..  ]
+"89
+[e = _tim -> -> 1 `i `uc ]
+"90
+[e = _GIE -> -> 1 `i `b ]
+"91
+[e $U 187  ]
+"93
+[e :U 190 ]
+"94
+[e = _GIE -> -> 0 `i `b ]
+"95
+[e = _tim -> -> 0 `i `uc ]
+"96
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"97
+[e ( _TempMed ..  ]
+"98
+[e = _GIE -> -> 1 `i `b ]
+"99
+[e $U 187  ]
+"101
+[e :U 191 ]
+"102
+[e = _GIE -> -> 0 `i `b ]
+"103
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"104
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 0 `i `uc :s 1C ]
+"105
+[e ( _writeLCD (3 , , -> -> 0 `i `uc -> -> 1 `i `uc :s 2C ]
+"107
+[e $ ! != -> ( _dht (1 &U _sensor `i -> -> -> 0 `i `uc `i 192  ]
+"108
+{
+"109
+[e ( _intTOstr (3 , , -> -> . . _sensor 0 1 `ui `i &U _tempVet -> -> 1 `i `uc ]
+"110
+[e ( _intTOstr (3 , , -> -> . . _sensor 0 3 `ui `i &U _umidadeVet -> -> 1 `i `uc ]
+"111
+}
+[e :U 192 ]
+"112
+[e ( _writeLCD (3 , , -> -> 10 `i `uc -> -> 0 `i `uc -> &U _tempVet `*Cuc ]
+"113
+[e ( _writeLCD (3 , , -> -> 10 `i `uc -> -> 1 `i `uc -> &U _umidadeVet `*Cuc ]
+"115
+[e = _tim -> -> 3 `i `uc ]
+"116
+[e = _GIE -> -> 1 `i `b ]
+"117
+[e $U 187  ]
+"119
+[e :U 193 ]
+"120
+[e = _GIE -> -> 0 `i `b ]
+"121
+[e = _tim -> -> 2 `i `uc ]
+"122
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"123
+[e ( _showtemp ..  ]
+"124
+[e ( _salvatemp (1 ( _temperaturaLer ..  ]
+"125
+[e = _Controle_do_retorno _repeat ]
+"126
+[e = _GIE -> -> 1 `i `b ]
+"127
+[e $U 187  ]
+"129
+[e :U 194 ]
+"130
+[e = _GIE -> -> 0 `i `b ]
+"131
+[e = _tim -> -> 2 `i `uc ]
+"132
+[e ( _cmdLCD (1 -> -> 1 `i `uc ]
+"133
+[e ( _erasertemp ..  ]
+"134
+[e ( _resetemp ..  ]
+"135
+[e = _Controle_do_retorno _repeat ]
+"136
+[e = _GIE -> -> 1 `i `b ]
+"137
+[e $U 187  ]
+"139
+}
+[e $U 187  ]
+"81
 [e :U 188 ]
-"150
+[e [\ _nr , $ -> -> 65 `ui `uc 189
+ , $ -> -> 66 `ui `uc 190
+ , $ -> -> 67 `ui `uc 191
+ , $ -> -> 42 `ui `uc 193
+ , $ -> -> 35 `ui `uc 194
+ 187 ]
+"139
+[e :U 187 ]
+"143
 }
 [e :U 184 ]
-"77
+"76
 [e $U 185  ]
 [e :U 186 ]
-"151
+"144
 [e :UE 183 ]
 }
+[a 1C 84 101 109 112 46 32 65 109 98 58 32 32 32 32 223 67 0 ]
+[a 2C 85 109 105 100 97 100 101 32 32 58 32 32 32 32 32 37 0 ]

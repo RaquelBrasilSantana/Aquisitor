@@ -2547,6 +2547,7 @@ void showtemp (void);
 void tempatt (void);
 void erasertemp (void);
 void tempdht (void);
+void intTOstr( int ui16, char * str, unsigned char final );
 
 # 20 "teclado.h"
 unsigned char tecAnterior;
@@ -2724,6 +2725,8 @@ int Controle_do_retorno = 0;
 int x;
 
 DHT sensor;
+unsigned char umidadeVet[4] = "   ";
+unsigned char tempVet[4] = "   ";
 
 void __interrupt() myISR(void)
 {
@@ -2756,14 +2759,13 @@ T1CONbits.TMR1ON=1;
 
 void main(void)
 {
-TRISC=0x00;
-PORTC=0;
+
+
 
 initLCD();
 tecladoIniciar();
 temperaturaInicializar();
 initDHT11();
-
 
 SplashScreen0();
 delay(100);
@@ -2778,18 +2780,10 @@ tmron();
 Telaprincipal();
 tempatt();
 
-
-
 while ( 1 )
 {
 nr = tecladoLer();
 delay(15);
-if(nr != 0)
-{
-putLCD(nr);
-}
-
-
 
 switch (nr)
 {
@@ -2814,17 +2808,17 @@ break;
 case'C':
 GIE = 0;
 cmdLCD(0x01);
-subtela();
-if( dht(&sensor) )
+writeLCD(0,0,"Temp. Amb:    \337C" );
+writeLCD(0,1,"Umidade  :     %" );
+
+if( dht( &sensor ) )
 {
-sensor.temperatura;
-sensor.umidade;
-char Td[] = {"00"};
-
-
-writeLCD(12,0,Td);
+intTOstr((unsigned int)sensor.temperatura, tempVet, 1 );
+intTOstr((unsigned int)sensor.umidade, umidadeVet, 1 );
 }
-tempdht();
+writeLCD(10,0, tempVet );
+writeLCD(10,1,umidadeVet );
+
 tim =3;
 GIE = 1;
 break;
